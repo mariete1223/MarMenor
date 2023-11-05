@@ -1,0 +1,135 @@
+properties: &commonMeta 
+    providedBy:
+        $ref: "ngsi-ld.yaml#/providedBy"
+    observedAt:
+        $ref: "ngsi-ld.yaml#/observedAt"
+    unitCode:
+        $ref: "ngsi-ld.yaml#/unitCode"
+
+
+conductivity:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: An individual representing the property conductitivity
+chlorophyll:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: An individual representing the property conductitivity
+humidity:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: An individual representing the relative humidity in a given location
+organicMatter:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: Property related to some measurements that are characterized by a certain value that is measured in a humidity unit
+oxygen:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: An individual representing the property oxygen in given location
+pH:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: An individual representing the property pH
+piezometricLevel:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: It defines the level to which water would rise if it were allowed to flow freely, measured in meters above the sea level (msnm)
+polyethylene:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: The amount of polyethylene present in the water
+precipitation:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: The amount of water falling in the soil by natural process (e.g. rain).
+pressure:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: Property related to some measurements that are characterized by a certain value that is measured in a pressure unit (bar or pascal)
+salinity:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: An individual representing the property salinity
+tds:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: An individual representing the property total disolved solids
+temperature:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)
+transparency:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: Property related to some measurements that are characterized by a certain value that is measured in a transparency unit (Revisar)
+turbidity:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: An individual representing the property turbidity
+volume:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: Property related to some measurements that are characterized by a certain value that is measured in a volume unit (liter or cubic_meter)
+waterFlow:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: Property related to some measurements that are characterized by a certain value that is measured in a waterFlow unit (liter_per_second, liter_per_minute, or liter_per_hour)
+waterLevel:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+  type: number
+  format: float
+  description: It defines the level in meters of the measured property
