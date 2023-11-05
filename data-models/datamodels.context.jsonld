@@ -1,0 +1,802 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "Boya": "fiware:Boya",
+        "ChlorophyllSensor": "fiware:ChlorophyllSensor",
+        "ConductivitySensor": "fiware:ConductivitySensor",
+        "HumiditySensor": "fiware:HumiditySensor",
+        "OrganicMatterSensor": "fiware:OrganicMatterSensor",
+        "OxygenSensor": "fiware:OxygenSensor",
+        "PhSensor": "fiware:PhSensor",
+        "PiezometricLevelSensor": "fiware:PiezometricLevelSensor",
+        "PolyethyleneSensor": "fiware:PolyethyleneSensor",
+        "PrecipitationSensor": "fiware:PrecipitationSensor",
+        "PressureSensor": "fiware:PressureSensor",
+        "SalinitySensor": "fiware:SalinitySensor",
+        "TdsSensor": "fiware:TdsSensor",
+        "TemperatureSensor": "fiware:TemperatureSensor",
+        "TransparencySensor": "fiware:TransparencySensor",
+        "TurbiditySensor": "fiware:TurbiditySensor",
+        "VolumeSensor": "fiware:VolumeSensor",
+        "WaterFlowSensor": "fiware:WaterFlowSensor",
+        "WaterLevelSensor": "fiware:WaterLevelSensor",
+        "address": "fiware:address",
+        "alternateName": {
+            "@id": "fiware:alternateName",
+            "@type": "xsd:string"
+        },
+        "areaServed": {
+            "@id": "fiware:areaServed",
+            "@type": "xsd:string"
+        },
+        "category": {
+            "@id": "fiware:category",
+            "@type": "xsd:array"
+        },
+        "chlorophyll": {
+            "@id": "fiware:chlorophyll",
+            "@type": "xsd:number"
+        },
+        "conductitivity": {
+            "@id": "fiware:conductitivity",
+            "@type": "xsd:number"
+        },
+        "conductivity": {
+            "@id": "fiware:conductivity",
+            "@type": "xsd:number"
+        },
+        "controlledAsset": {
+            "@id": "fiware:controlledAsset",
+            "@type": "xsd:array"
+        },
+        "controlledProperty": {
+            "@id": "fiware:controlledProperty",
+            "@type": "xsd:array"
+        },
+        "dataProvider": {
+            "@id": "fiware:dataProvider",
+            "@type": "xsd:string"
+        },
+        "dateLastValueReported": {
+            "@id": "fiware:dateLastValueReported",
+            "@type": "xs:dateTime"
+        },
+        "description": {
+            "@id": "fiware:description",
+            "@type": "xsd:string"
+        },
+        "humidity": {
+            "@id": "fiware:humidity",
+            "@type": "xsd:number"
+        },
+        "location": {
+            "@id": "fiware:location",
+            "@type": "xsd:undefined"
+        },
+        "name": {
+            "@id": "fiware:name",
+            "@type": "xsd:string"
+        },
+        "organicMatter": {
+            "@id": "fiware:organicMatter",
+            "@type": "xsd:number"
+        },
+        "oxygen": {
+            "@id": "fiware:oxygen",
+            "@type": "xsd:number"
+        },
+        "pH": {
+            "@id": "fiware:pH",
+            "@type": "xsd:number"
+        },
+        "piezometricLevel": {
+            "@id": "fiware:piezometricLevel",
+            "@type": "xsd:number"
+        },
+        "polyethylene": {
+            "@id": "fiware:polyethylene",
+            "@type": "xsd:number"
+        },
+        "precipitation": {
+            "@id": "fiware:precipitation",
+            "@type": "xsd:number"
+        },
+        "pressure": {
+            "@id": "fiware:pressure",
+            "@type": "xsd:number"
+        },
+        "salinity": {
+            "@id": "fiware:salinity",
+            "@type": "xsd:number"
+        },
+        "source": {
+            "@id": "fiware:source",
+            "@type": "xsd:string"
+        },
+        "tds": {
+            "@id": "fiware:tds",
+            "@type": "xsd:number"
+        },
+        "temperature": {
+            "@id": "fiware:temperature",
+            "@type": "xsd:number"
+        },
+        "transparency": {
+            "@id": "fiware:transparency",
+            "@type": "xsd:number"
+        },
+        "turbidity": {
+            "@id": "fiware:turbidity",
+            "@type": "xsd:number"
+        },
+        "volume": {
+            "@id": "fiware:volume",
+            "@type": "xsd:number"
+        },
+        "waterFlow": {
+            "@id": "fiware:waterFlow",
+            "@type": "xsd:number"
+        },
+        "waterLevel": {
+            "@id": "fiware:waterLevel",
+            "@type": "xsd:number"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "fiware:TemperatureSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing temperature`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "TemperatureSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:ConductivitySensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing conductivity`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "ConductivitySensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:ChlorophyllSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing chlorophyll`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "ChlorophyllSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:HumiditySensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing humidity`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "HumiditySensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:OrganicMatterSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing organicMatter`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "OrganicMatterSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:OxygenSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing oxygen`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "OxygenSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:PhSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pH`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "PhSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:PiezometricLevelSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing piezometricLevel`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "PiezometricLevelSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:PolyethyleneSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing polyethylene`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "PolyethyleneSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:PrecipitationSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing precipitation`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "PrecipitationSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:PressureSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pressure`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "PressureSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:SalinitySensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of salinity`."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "SalinitySensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:TdsSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used to measure the total amount of mobile charged ions, including minerals, salts or metals dissolved in a given volume of water, expressed in units of mg per unit volume of water (mg/L), also referred to as parts per million (ppm)."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "TdsSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:TransparencySensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used to measure the transparency of the water."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "TransparencySensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:TurbiditySensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used to measure the turbidity of the water."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "TurbiditySensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:VolumeSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used to measure the volume of the water."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "VolumeSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:WaterFlowSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and measures the flow of water."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "WaterFlowSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:WaterLevelSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category Sensor and is used to measure the level of the water."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "WaterLevelSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Boya",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Boya"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:temperature",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "temperature"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:conductivity",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An individual representing the property conductitivity"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "conductivity"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:chlorophyll",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An individual representing the property conductitivity"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "chlorophyll"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:humidity",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An individual representing the relative humidity in a given location"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "humidity"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:organicMatter",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property related to some measurements that are characterized by a certain value that is measured in a humidity unit"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "organicMatter"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:oxygen",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An individual representing the property oxygen in given location"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "oxygen"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:pH",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An individual representing the property pH"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "pH"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:piezometricLevel",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "It defines the level to which water would rise if it were allowed to flow freely, measured in meters above the sea level (msnm)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "piezometricLevel"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:polyethylene",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "The amount of polyethylene present in the water"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "polyethylene"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:precipitation",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "The amount of water falling in the soil by natural process (e.g. rain)."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "precipitation"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:pressure",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property related to some measurements that are characterized by a certain value that is measured in a pressure unit (bar or pascal)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "pressure"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:salinity",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An individual representing the property salinity"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "salinity"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:tds",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An individual representing the property total disolved solids"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "tds"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:transparency",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property related to some measurements that are characterized by a certain value that is measured in a transparency unit (Revisar)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "transparency"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:turbidity",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "An individual representing the property turbidity"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "turbidity"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:volume",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property related to some measurements that are characterized by a certain value that is measured in a volume unit (liter or cubic_meter)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "volume"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:waterFlow",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Property related to some measurements that are characterized by a certain value that is measured in a waterFlow unit (liter_per_second, liter_per_minute, or liter_per_hour)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "waterFlow"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:waterLevel",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "It defines the level in meters of the measured property"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "waterLevel"
+                }
+            ]
+        }
+    ]
+}
