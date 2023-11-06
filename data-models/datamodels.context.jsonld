@@ -18,6 +18,7 @@
         "PolyethyleneSensor": "fiware:PolyethyleneSensor",
         "PrecipitationSensor": "fiware:PrecipitationSensor",
         "PressureSensor": "fiware:PressureSensor",
+        "Rambla": "fiware:Rambla",
         "SalinitySensor": "fiware:SalinitySensor",
         "TdsSensor": "fiware:TdsSensor",
         "TemperatureSensor": "fiware:TemperatureSensor",
@@ -504,6 +505,25 @@
                 {
                     "@language": "en",
                     "@value": "Boya"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Rambla",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Rambla"
                 }
             ],
             "rdfs:subClassOf": {

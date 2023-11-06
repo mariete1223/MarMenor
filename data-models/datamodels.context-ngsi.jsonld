@@ -16,6 +16,7 @@
         "PolyethyleneSensor": "fiware:PolyethyleneSensor",
         "PrecipitationSensor": "fiware:PrecipitationSensor",
         "PressureSensor": "fiware:PressureSensor",
+        "Rambla": "fiware:Rambla",
         "SalinitySensor": "fiware:SalinitySensor",
         "TdsSensor": "fiware:TdsSensor",
         "TemperatureSensor": "fiware:TemperatureSensor",

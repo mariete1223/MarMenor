@@ -1190,6 +1190,86 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 
 
 
+# Rambla
+
+
+-  `address`: The mailing address
+   -  Attribute type: **Property**. [address](https://schema.org/address)
+   -  Optional
+-  `dateLastValueReported`: A timestamp which denotes the last time when the device successfully reported data to the cloud
+   -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+   -  Optional
+-  `description`: A description of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `id`: Unique identifier of the entity
+   -  Attribute type: **Property**. 
+   -  Required
+-  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+   -  Attribute type: **GeoProperty**. 
+   -  Optional
+-  `name`: The name of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `type`: NGSI Entity type. It has to be Rambla. One of : `Rambla`.
+   -  Attribute type: **Property**. 
+   -  Required
+-  `temperature`: Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `precipitation`: The amount of water falling in the soil by natural process (e.g. rain).
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `waterFlow`: Property related to some measurements that are characterized by a certain value that is measured in a waterFlow unit (liter_per_second, liter_per_minute, or liter_per_hour)
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `waterLevel`: It defines the level in meters of the measured property
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `humidity`: An individual representing the relative humidity in a given location
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+
+
+
 ## Examples
 
 ### OK
