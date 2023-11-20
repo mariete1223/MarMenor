@@ -15,6 +15,7 @@
         "OxygenSensor": "fiware:OxygenSensor",
         "PhSensor": "fiware:PhSensor",
         "PiezometricLevelSensor": "fiware:PiezometricLevelSensor",
+        "PiezometricPoint": "fiware:PiezometricPoint",
         "PolyethyleneSensor": "fiware:PolyethyleneSensor",
         "PrecipitationSensor": "fiware:PrecipitationSensor",
         "PressureSensor": "fiware:PressureSensor",
@@ -44,6 +45,10 @@
             "@id": "fiware:chlorophyll",
             "@type": "xsd:number"
         },
+        "closeMeasurements": {
+            "@id": "fiware:closeMeasurements",
+            "@type": "xsd:array"
+        },
         "conductitivity": {
             "@id": "fiware:conductitivity",
             "@type": "xsd:number"
@@ -54,7 +59,7 @@
         },
         "controlledAsset": {
             "@id": "fiware:controlledAsset",
-            "@type": "xsd:array"
+            "@type": "@id"
         },
         "controlledProperty": {
             "@id": "fiware:controlledProperty",
@@ -84,6 +89,14 @@
             "@id": "fiware:name",
             "@type": "xsd:string"
         },
+        "nextSection": {
+            "@id": "fiware:nextSection",
+            "@type": "@id"
+        },
+        "numberInNetwork": {
+            "@id": "fiware:numberInNetwork",
+            "@type": "xsd:number"
+        },
         "organicMatter": {
             "@id": "fiware:organicMatter",
             "@type": "xsd:number"
@@ -112,8 +125,16 @@
             "@id": "fiware:pressure",
             "@type": "xsd:number"
         },
+        "previousSection": {
+            "@id": "fiware:previousSection",
+            "@type": "@id"
+        },
         "salinity": {
             "@id": "fiware:salinity",
+            "@type": "xsd:number"
+        },
+        "section": {
+            "@id": "fiware:section",
             "@type": "xsd:number"
         },
         "source": {
@@ -524,6 +545,25 @@
                 {
                     "@language": "en",
                     "@value": "Rambla"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:PiezometricPoint",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "PiezometricPoint"
                 }
             ],
             "rdfs:subClassOf": {

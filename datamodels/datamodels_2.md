@@ -17,8 +17,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -76,8 +76,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -135,8 +135,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -194,8 +194,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -253,8 +253,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -312,8 +312,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -371,8 +371,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -430,8 +430,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -489,8 +489,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -548,8 +548,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -607,8 +607,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -666,8 +666,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -725,8 +725,8 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -784,8 +784,8 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -843,8 +843,8 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -902,8 +902,8 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -961,8 +961,8 @@ A device that consists of a sensor, has category `Sensor` and measures the flow 
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -1020,8 +1020,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
--  `controlledAsset`: List of the asset(s) (building, object, etc.) controlled by the device
-   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
 -  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
    -  Attribute type: **Property**. 
@@ -1087,6 +1087,9 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
+-  `closeMeasurements`: A list of the devices that take measures close to this Boya
+   -  Attribute type: **Property**. 
+   -  Optional
 -  `temperature`: Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
@@ -1214,9 +1217,21 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
    -  Attribute type: **Property**. 
    -  Optional
+-  `section`: Number indicating the order of the rambla in case it is part of a set of ramblas, if not it will be 0
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `nextSection`: Entity ID of the next section of the rambla, if it does not exist it will be empty
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+   -  Optional
+-  `previousSection`: Entity ID of the previous section of the rambla, if it does not exist it will be empty
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+   -  Optional
 -  `type`: NGSI Entity type. It has to be Rambla. One of : `Rambla`.
    -  Attribute type: **Property**. 
    -  Required
+-  `closeMeasurements`: A list of the devices that take measures close to this Rambla
+   -  Attribute type: **Property**. 
+   -  Optional
 -  `temperature`: Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
@@ -1258,6 +1273,92 @@ A device that consists of a sensor, has category Sensor and is used to measure t
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `humidity`: An individual representing the relative humidity in a given location
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+
+
+
+# PiezometricPoint
+
+
+-  `address`: The mailing address
+   -  Attribute type: **Property**. [address](https://schema.org/address)
+   -  Optional
+-  `dateLastValueReported`: A timestamp which denotes the last time when the device successfully reported data to the cloud
+   -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+   -  Optional
+-  `description`: A description of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `id`: Unique identifier of the entity
+   -  Attribute type: **Property**. 
+   -  Required
+-  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+   -  Attribute type: **GeoProperty**. 
+   -  Optional
+-  `name`: The name of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `numberInNetwork`: Number indicating the order of the piezometric point in case it is part of a set of piezometric points, if not it will be 0
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `type`: NGSI Entity type. It has to be Rambla. One of : `PiezometricPoint`.
+   -  Attribute type: **Property**. 
+   -  Required
+-  `closeMeasurements`: A list of the devices that take measures close to this PiezometricPoint
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `temperature`: Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `conductivity`: An individual representing the property conductitivity
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `piezometricLevel`: It defines the level to which water would rise if it were allowed to flow freely, measured in meters above the sea level (msnm)
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `salinity`: An individual representing the property salinity
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `tds`: An individual representing the property total disolved solids
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
    -  Meta Data: 
