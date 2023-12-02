@@ -28,17 +28,17 @@
         "VolumeSensor": "https://uri.fiware.org/ns/dataModels#VolumeSensor",
         "WaterFlowSensor": "https://uri.fiware.org/ns/dataModels#WaterFlowSensor",
         "WaterLevelSensor": "https://uri.fiware.org/ns/dataModels#WaterLevelSensor",
-        "address": "https://uri.fiware.org/ns/dataModels#address",
+        "address": "https://smartdatamodels.org/address",
         "alternateName": {
-            "@id": "https://uri.fiware.org/ns/dataModels#alternateName",
+            "@id": "https://smartdatamodels.org/alternateName",
             "@type": "xsd:string"
         },
         "areaServed": {
-            "@id": "https://uri.fiware.org/ns/dataModels#areaServed",
+            "@id": "https://smartdatamodels.org/areaServed",
             "@type": "xsd:string"
         },
         "category": {
-            "@id": "https://uri.fiware.org/ns/dataModels#category",
+            "@id": "https://smartdatamodels.org/category",
             "@type": "xsd:array"
         },
         "chlorophyll": {
@@ -54,7 +54,7 @@
             "@type": "xsd:array"
         },
         "conductivity": {
-            "@id": "https://uri.fiware.org/ns/dataModels#conductivity",
+            "@id": "https://smartdatamodels.org/conductivity",
             "@type": "xsd:number"
         },
         "conductivityValues": {
@@ -62,35 +62,39 @@
             "@type": "xsd:array"
         },
         "controlledAsset": {
-            "@id": "https://uri.fiware.org/ns/dataModels#controlledAsset",
+            "@id": "https://smartdatamodels.org/controlledAsset",
             "@type": "@id"
         },
         "controlledProperty": {
-            "@id": "https://uri.fiware.org/ns/dataModels#controlledProperty",
+            "@id": "https://smartdatamodels.org/controlledProperty",
             "@type": "xsd:array"
         },
         "dataProvider": {
-            "@id": "https://uri.fiware.org/ns/dataModels#dataProvider",
+            "@id": "https://smartdatamodels.org/dataProvider",
             "@type": "xsd:string"
         },
         "dateLastValueReported": {
-            "@id": "https://uri.fiware.org/ns/dataModels#dateLastValueReported",
+            "@id": "https://smartdatamodels.org/dateLastValueReported",
             "@type": "xs:dateTime"
         },
         "description": {
-            "@id": "https://uri.fiware.org/ns/dataModels#description",
+            "@id": "https://smartdatamodels.org/description",
             "@type": "xsd:string"
         },
         "humidity": {
-            "@id": "https://uri.fiware.org/ns/dataModels#humidity",
+            "@id": "https://smartdatamodels.org/humidity",
             "@type": "xsd:number"
         },
+        "identifier": {
+            "@id": "https://smartdatamodels.org/identifier",
+            "@type": "xsd:undefined"
+        },
         "location": {
-            "@id": "https://uri.fiware.org/ns/dataModels#location",
+            "@id": "ngsi-ld:location",
             "@type": "xsd:undefined"
         },
         "name": {
-            "@id": "https://uri.fiware.org/ns/dataModels#name",
+            "@id": "https://smartdatamodels.org/name",
             "@type": "xsd:string"
         },
         "nextSection": {
@@ -118,7 +122,7 @@
             "@type": "xsd:array"
         },
         "pH": {
-            "@id": "https://uri.fiware.org/ns/dataModels#pH",
+            "@id": "https://smartdatamodels.org/pH",
             "@type": "xsd:number"
         },
         "pHValues": {
@@ -138,11 +142,11 @@
             "@type": "xsd:array"
         },
         "precipitation": {
-            "@id": "https://uri.fiware.org/ns/dataModels#precipitation",
+            "@id": "https://smartdatamodels.org/precipitation",
             "@type": "xsd:number"
         },
         "pressure": {
-            "@id": "https://uri.fiware.org/ns/dataModels#pressure",
+            "@id": "https://smartdatamodels.org/pressure",
             "@type": "xsd:number"
         },
         "previousSection": {
@@ -150,7 +154,7 @@
             "@type": "@id"
         },
         "salinity": {
-            "@id": "https://uri.fiware.org/ns/dataModels#salinity",
+            "@id": "https://smartdatamodels.org/salinity",
             "@type": "xsd:number"
         },
         "salinityValues": {
@@ -162,15 +166,15 @@
             "@type": "xsd:number"
         },
         "source": {
-            "@id": "https://uri.fiware.org/ns/dataModels#source",
+            "@id": "https://smartdatamodels.org/source",
             "@type": "xsd:string"
         },
         "tds": {
-            "@id": "https://uri.fiware.org/ns/dataModels#tds",
+            "@id": "https://smartdatamodels.org/tds",
             "@type": "xsd:number"
         },
         "temperature": {
-            "@id": "https://uri.fiware.org/ns/dataModels#temperature",
+            "@id": "https://smartdatamodels.org/temperature",
             "@type": "xsd:number"
         },
         "temperatureValues": {
@@ -186,7 +190,7 @@
             "@type": "xsd:array"
         },
         "turbidity": {
-            "@id": "https://uri.fiware.org/ns/dataModels#turbidity",
+            "@id": "https://smartdatamodels.org/turbidity",
             "@type": "xsd:number"
         },
         "turbidityValues": {
@@ -198,12 +202,20 @@
             "@type": "xsd:number"
         },
         "waterFlow": {
-            "@id": "https://uri.fiware.org/ns/dataModels#waterFlow",
+            "@id": "https://smartdatamodels.org/waterFlow",
             "@type": "xsd:number"
+        },
+        "waterFlowValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#waterFlowValues",
+            "@type": "xsd:array"
         },
         "waterLevel": {
             "@id": "https://uri.fiware.org/ns/dataModels#waterLevel",
             "@type": "xsd:number"
+        },
+        "waterLevelValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#waterLevelValues",
+            "@type": "xsd:array"
         }
     },
     "@graph": [
@@ -607,7 +619,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#temperature",
+            "@id": "https://smartdatamodels.org/temperature",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -623,7 +635,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#conductivity",
+            "@id": "https://smartdatamodels.org/conductivity",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -655,7 +667,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#humidity",
+            "@id": "https://smartdatamodels.org/humidity",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -703,7 +715,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#pH",
+            "@id": "https://smartdatamodels.org/pH",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -751,7 +763,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#precipitation",
+            "@id": "https://smartdatamodels.org/precipitation",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -767,7 +779,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#pressure",
+            "@id": "https://smartdatamodels.org/pressure",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -783,7 +795,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#salinity",
+            "@id": "https://smartdatamodels.org/salinity",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -799,7 +811,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#tds",
+            "@id": "https://smartdatamodels.org/tds",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -831,7 +843,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#turbidity",
+            "@id": "https://smartdatamodels.org/turbidity",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -863,7 +875,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#waterFlow",
+            "@id": "https://smartdatamodels.org/waterFlow",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {

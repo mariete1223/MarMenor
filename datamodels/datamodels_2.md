@@ -29,9 +29,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -53,6 +53,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -88,9 +90,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -112,6 +114,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -147,9 +151,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -171,6 +175,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -206,9 +212,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -230,6 +236,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -265,9 +273,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -289,6 +297,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -324,9 +334,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -348,6 +358,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -383,9 +395,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -407,6 +419,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -442,9 +456,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -466,6 +480,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -501,9 +517,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -525,6 +541,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -560,9 +578,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -584,6 +602,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -619,9 +639,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -643,6 +663,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -678,9 +700,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -702,6 +724,8 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -737,9 +761,9 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -761,6 +785,8 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -796,9 +822,9 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -820,6 +846,8 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -855,9 +883,9 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -879,6 +907,8 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -914,9 +944,9 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -938,6 +968,8 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -973,9 +1005,9 @@ A device that consists of a sensor, has category `Sensor` and measures the flow 
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -997,6 +1029,8 @@ A device that consists of a sensor, has category `Sensor` and measures the flow 
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -1032,9 +1066,9 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -1057,6 +1091,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
@@ -1072,9 +1108,9 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -1135,9 +1171,9 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -1172,6 +1208,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `precipitation`: The amount of water falling in the soil by natural process (e.g. rain).
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
@@ -1182,26 +1220,14 @@ A device that consists of a sensor, has category Sensor and is used to measure t
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `waterFlow`: Property related to some measurements that are characterized by a certain value that is measured in a waterFlow unit (liter_per_second, liter_per_minute, or liter_per_hour)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `waterLevel`: It defines the level in meters of the measured property
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `waterFlowValues`: A list of the water flow values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `waterLevelValues`: A list of the water level values measured by this Boya
+   -  Attribute type: **Property**. 
+   -  Optional
 -  `humidity`: An individual representing the relative humidity in a given location
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
@@ -1211,6 +1237,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
@@ -1227,9 +1255,9 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `description`: A description of this item
    -  Attribute type: **Property**. 
    -  Optional
--  `id`: Unique identifier of the entity
+-  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Required
+   -  Optional
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -1258,6 +1286,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `conductivity`: An individual representing the property conductitivity
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
@@ -1267,6 +1297,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `piezometricLevel`: It defines the level to which water would rise if it were allowed to flow freely, measured in meters above the sea level (msnm)
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
@@ -1278,6 +1310,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `salinity`: An individual representing the property salinity
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
@@ -1288,6 +1322,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `tds`: An individual representing the property total disolved solids
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
@@ -1297,6 +1333,8 @@ A device that consists of a sensor, has category Sensor and is used to measure t
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
        -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
