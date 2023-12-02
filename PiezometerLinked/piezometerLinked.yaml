@@ -1,5 +1,5 @@
-SensorDevice:
-  description: 'An apparatus (hardware + software + firmware) intended to accomplish a particular task (sensing the environment, actuating, etc.).'
+PiezometerLinked:
+  description: 'It is a point in a piezometric network where a polling is made, with the adittion that it is close to another piezometric point and it adds new measures'
   properties:
     address:
       description: The mailing address
@@ -10,116 +10,39 @@ SensorDevice:
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
+            uri-prefix: https://smartdatamodels.org/
         addressLocality:
           description: 'The locality in which the street address is, and which is in the region'
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
+            uri-prefix: https://smartdatamodels.org/
+        postalCode:
+          description: 'The postal code. For example, 24004'
+          type: string
+          x-ngsi:
+            model: https://schema.org/https://schema.org/postalCode
+            type: Property
+            uri-prefix: https://smartdatamodels.org/
         addressRegion:
           description: 'The region in which the locality is, and which is in the country'
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
+            uri-prefix: https://smartdatamodels.org/
         district:
           description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
           x-ngsi:
             type: Property
+            uri-prefix: https://smartdatamodels.org/
       type: object
       x-ngsi:
         model: https://schema.org/address
         type: Property
-    alternateName:
-      description: An alternative name for this item
-      type: string
-      x-ngsi:
-        type: Property
-    areaServed:
-      description: The geographic area where a service or offered item is provided
-      type: string
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-    category:
-      description: "Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category"
-      items:
-        enum:
-          - actuator
-          - beacon
-          - endgun
-          - HVAC
-          - implement
-          - irrSection
-          - irrSystem
-          - meter
-          - multimedia
-          - network
-          - sensor
-        type: string
-      type: array
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-    controlledProperty:
-      description: 'Anything that can be sensed, measured or controlled by. Enum:''conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'''
-      items:
-        enum:
-          - conductivity
-          - chlorophyll
-          - humidity
-          - organicMatter
-          - oxygen
-          - pH
-          - piezometricLevel
-          - polyethylene
-          - precipitation
-          - pressure
-          - salinity
-          - tds
-          - temperature
-          - transparency
-          - turbidity
-          - volume
-          - waterFlow
-          - waterLevel
-        type: string
-      type: array
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-    controlledAsset:
-      description: 'List of the asset(s) (building, object, etc.) controlled by the device'
-      items:
-        oneOf:
-          - format: uri
-            type: string
-          - anyOf:
-              - description: Identifier format of any NGSI entity
-                maxLength: 256
-                minLength: 1
-                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-                type: string
-                x-ngsi:
-                  type: Property
-              - description: Identifier format of any NGSI entity
-                format: uri
-                type: string
-                x-ngsi:
-                  type: Property
-            description: Unique identifier of the entity
-            x-ngsi:
-              type: Property
-      type: array
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-    dataProvider:
-      description: A sequence of characters identifying the provider of the harmonised data entity
-      type: string
-      x-ngsi:
-        type: Property
+        uri-prefix: https://smartdatamodels.org/
     dateLastValueReported:
       description: A timestamp which denotes the last time when the device successfully reported data to the cloud
       format: date-time
@@ -127,12 +50,14 @@ SensorDevice:
       x-ngsi:
         model: https://schema.org/DateTime
         type: Property
+        uri-prefix: https://smartdatamodels.org/
     description:
       description: A description of this item
       type: string
       x-ngsi:
         type: Property
-    id:
+        uri-prefix: https://smartdatamodels.org/
+    identifier:
       anyOf:
         - description: Identifier format of any NGSI entity
           maxLength: 256
@@ -149,6 +74,7 @@ SensorDevice:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
+        uri-prefix: https://smartdatamodels.org/
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
@@ -254,6 +180,7 @@ SensorDevice:
           type: object
           x-ngsi:
             type: GeoProperty
+            
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -314,31 +241,88 @@ SensorDevice:
             type: GeoProperty
       x-ngsi:
         type: GeoProperty
+        uri-prefix: https://uri.etsi.org/ngsi-ld/
     name:
       description: The name of this item
       type: string
       x-ngsi:
         type: Property
+        uri-prefix: https://smartdatamodels.org/
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
+        uri-prefix: https://smartdatamodels.org/
+    numberInNetwork:
+      description: 'Number indicating the order of the piezometric point in case it is part of a set of piezometric points, if not it will be 0'
+      type: number
+      x-ngsi:
+        type: Property
     type:
-      description: NGSI Entity type. It has to be Device
+      description: NGSI Entity type. It has to be Rambla
       enum:
-        - Device
+        - PiezometricPoint
       type: string
       x-ngsi:
         type: Property
+        uri-prefix: https://smartdatamodels.org/
+    closeMeasurements:
+      description: 'A list of the devices that take measures close to this PiezometricPoint'
+      type: array
+      items:
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Relationship
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Relationship
+        description: Unique identifier of the entity
+      x-ngsi:
+          type: Property
+    waterLevelValues:
+      description: 'A list of the water level values measured by this Boya'
+      type: array
+      items:
+        type: object
+        properties:
+          value: 
+            ref: ./properties-saref.yaml#/waterLevel
+      x-ngsi:
+        type: Property
+    waterFlowValues:
+      description: 'A list of the water flow values measured by this Boya'
+      type: array
+      items:
+        type: object
+        properties:
+          value: 
+            ref: ./properties-saref.yaml#/flow
+      x-ngsi:
+        type: Property
+    temperature:
+      $ref: ./properties-saref.yaml#/temperature
+    conductivity:
+      $ref: ./properties-saref.yaml#/conductivity
+    piezometricLevel:
+      $ref: ./properties-saref.yaml#/piezometricLevel
+    salinity:
+      $ref: ./properties-saref.yaml#/salinity
+    tds:
+      $ref: ./properties-saref.yaml#/tds
+    
   required:
     - id
     - type
-    - controlledProperty
   type: object
   x-derived-from: ""
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
-  x-license-url: https://github.com/smart-data-models/dataModel.Device/blob/master/Device/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.Device/Device/schema.json
   x-model-tags: ""
   x-version: 0.0.8
