@@ -7,27 +7,27 @@
         "schema": "https://schema.org/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "Buoy": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlBuoy",
-        "ChlorophyllSensor": "https://uri.fiware.org/ns/dataModels#ChlorophyllSensor",
-        "ConductivitySensor": "https://uri.fiware.org/ns/dataModels#ConductivitySensor",
-        "HumiditySensor": "https://uri.fiware.org/ns/dataModels#HumiditySensor",
-        "OrganicMatterSensor": "https://uri.fiware.org/ns/dataModels#OrganicMatterSensor",
-        "OxygenSensor": "https://uri.fiware.org/ns/dataModels#OxygenSensor",
-        "PhSensor": "https://uri.fiware.org/ns/dataModels#PhSensor",
-        "PiezometricLevelSensor": "https://uri.fiware.org/ns/dataModels#PiezometricLevelSensor",
-        "PiezometricPoint": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yamlPiezometricPoint",
-        "PolyethyleneSensor": "https://uri.fiware.org/ns/dataModels#PolyethyleneSensor",
-        "PrecipitationSensor": "https://uri.fiware.org/ns/dataModels#PrecipitationSensor",
-        "PressureSensor": "https://uri.fiware.org/ns/dataModels#PressureSensor",
-        "Ravine": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yamlRavine",
-        "SalinitySensor": "https://uri.fiware.org/ns/dataModels#SalinitySensor",
-        "TdsSensor": "https://uri.fiware.org/ns/dataModels#TdsSensor",
-        "TemperatureSensor": "https://uri.fiware.org/ns/dataModels#TemperatureSensor",
-        "TransparencySensor": "https://uri.fiware.org/ns/dataModels#TransparencySensor",
-        "TurbiditySensor": "https://uri.fiware.org/ns/dataModels#TurbiditySensor",
-        "VolumeSensor": "https://uri.fiware.org/ns/dataModels#VolumeSensor",
-        "WaterFlowSensor": "https://uri.fiware.org/ns/dataModels#WaterFlowSensor",
-        "WaterLevelSensor": "https://uri.fiware.org/ns/dataModels#WaterLevelSensor",
+        "Buoy": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/Buoy",
+        "ChlorophyllSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ChlorophyllSensor",
+        "ConductivitySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ConductivitySensor",
+        "HumiditySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/HumiditySensor",
+        "OrganicMatterSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/OrganicMatterSensor",
+        "OxygenSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/OxygenSensor",
+        "PhSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PhSensor",
+        "PiezometricLevelSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PiezometricLevelSensor",
+        "PiezometricPoint": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/PiezometricPoint",
+        "PolyethyleneSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PolyethyleneSensor",
+        "PrecipitationSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PrecipitationSensor",
+        "PressureSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PressureSensor",
+        "Ravine": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/Ravine",
+        "SalinitySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/SalinitySensor",
+        "TdsSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TdsSensor",
+        "TemperatureSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TemperatureSensor",
+        "TransparencySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TransparencySensor",
+        "TurbiditySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TurbiditySensor",
+        "VolumeSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/VolumeSensor",
+        "WaterFlowSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterFlowSensor",
+        "WaterLevelSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterLevelSensor",
         "address": "https://smartdatamodels.org/address",
         "alternateName": {
             "@id": "https://smartdatamodels.org/alternateName",
@@ -42,15 +42,15 @@
             "@type": "xsd:array"
         },
         "chlorophyll": {
-            "@id": "https://uri.fiware.org/ns/dataModels#chlorophyll",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/chlorophyll",
             "@type": "xsd:number"
         },
         "chlorophyllValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlchlorophyllValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/chlorophyllValues",
             "@type": "xsd:array"
         },
         "closeMeasurements": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yamlcloseMeasurements",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/closeMeasurements",
             "@type": "xsd:array"
         },
         "conductivity": {
@@ -58,7 +58,7 @@
             "@type": "xsd:number"
         },
         "conductivityValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlconductivityValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/conductivityValues",
             "@type": "xsd:array"
         },
         "controlledAsset": {
@@ -98,27 +98,27 @@
             "@type": "xsd:string"
         },
         "nextSection": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yamlnextSection",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/nextSection",
             "@type": "@id"
         },
         "numberInNetwork": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yamlnumberInNetwork",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/numberInNetwork",
             "@type": "xsd:number"
         },
         "organicMatter": {
-            "@id": "https://uri.fiware.org/ns/dataModels#organicMatter",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/organicMatter",
             "@type": "xsd:number"
         },
         "organicMatterValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlorganicMatterValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/organicMatterValues",
             "@type": "xsd:array"
         },
         "oxygen": {
-            "@id": "https://uri.fiware.org/ns/dataModels#oxygen",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/oxygen",
             "@type": "xsd:number"
         },
         "oxygenValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamloxygenValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/oxygenValues",
             "@type": "xsd:array"
         },
         "pH": {
@@ -126,19 +126,19 @@
             "@type": "xsd:number"
         },
         "pHValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlpHValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/pHValues",
             "@type": "xsd:array"
         },
         "piezometricLevel": {
-            "@id": "https://uri.fiware.org/ns/dataModels#piezometricLevel",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/piezometricLevel",
             "@type": "xsd:number"
         },
         "polyethylene": {
-            "@id": "https://uri.fiware.org/ns/dataModels#polyethylene",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/polyethylene",
             "@type": "xsd:number"
         },
         "polyethyleneValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlpolyethyleneValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/polyethyleneValues",
             "@type": "xsd:array"
         },
         "precipitation": {
@@ -150,7 +150,7 @@
             "@type": "xsd:number"
         },
         "previousSection": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yamlpreviousSection",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/previousSection",
             "@type": "@id"
         },
         "salinity": {
@@ -158,11 +158,11 @@
             "@type": "xsd:number"
         },
         "salinityValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlsalinityValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/salinityValues",
             "@type": "xsd:array"
         },
         "section": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yamlsection",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/section",
             "@type": "xsd:number"
         },
         "source": {
@@ -178,15 +178,15 @@
             "@type": "xsd:number"
         },
         "temperatureValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamltemperatureValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/temperatureValues",
             "@type": "xsd:array"
         },
         "transparency": {
-            "@id": "https://uri.fiware.org/ns/dataModels#transparency",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/transparency",
             "@type": "xsd:number"
         },
         "transparencyValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamltransparencyValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/transparencyValues",
             "@type": "xsd:array"
         },
         "turbidity": {
@@ -194,11 +194,11 @@
             "@type": "xsd:number"
         },
         "turbidityValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlturbidityValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/turbidityValues",
             "@type": "xsd:array"
         },
         "volume": {
-            "@id": "https://uri.fiware.org/ns/dataModels#volume",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/volume",
             "@type": "xsd:number"
         },
         "waterFlow": {
@@ -206,21 +206,21 @@
             "@type": "xsd:number"
         },
         "waterFlowValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yamlwaterFlowValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterFlowValues",
             "@type": "xsd:array"
         },
         "waterLevel": {
-            "@id": "https://uri.fiware.org/ns/dataModels#waterLevel",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/waterLevel",
             "@type": "xsd:number"
         },
         "waterLevelValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yamlwaterLevelValues",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterLevelValues",
             "@type": "xsd:array"
         }
     },
     "@graph": [
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#TemperatureSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TemperatureSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -239,7 +239,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#ConductivitySensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ConductivitySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -258,7 +258,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#ChlorophyllSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ChlorophyllSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -277,7 +277,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#HumiditySensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/HumiditySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -296,7 +296,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#OrganicMatterSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/OrganicMatterSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -315,7 +315,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#OxygenSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/OxygenSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -334,7 +334,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#PhSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PhSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -353,7 +353,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#PiezometricLevelSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PiezometricLevelSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -372,7 +372,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#PolyethyleneSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PolyethyleneSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -391,7 +391,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#PrecipitationSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PrecipitationSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -410,7 +410,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#PressureSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PressureSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -429,7 +429,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#SalinitySensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/SalinitySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -448,7 +448,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#TdsSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TdsSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -467,7 +467,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#TransparencySensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TransparencySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -486,7 +486,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#TurbiditySensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TurbiditySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -505,7 +505,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#VolumeSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/VolumeSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -524,7 +524,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#WaterFlowSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterFlowSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -543,7 +543,7 @@
             }
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#WaterLevelSensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterLevelSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -562,7 +562,7 @@
             }
         },
         {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yamlBuoy",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/Buoy",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -581,7 +581,7 @@
             }
         },
         {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yamlRavine",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/Ravine",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -600,7 +600,7 @@
             }
         },
         {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yamlPiezometricPoint",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/PiezometricPoint",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -651,7 +651,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#chlorophyll",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/chlorophyll",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -683,7 +683,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#organicMatter",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/organicMatter",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -699,7 +699,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#oxygen",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/oxygen",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -731,7 +731,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#piezometricLevel",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/piezometricLevel",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -747,7 +747,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#polyethylene",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/polyethylene",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -827,7 +827,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#transparency",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/transparency",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -859,7 +859,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#volume",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/volume",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -891,7 +891,7 @@
             ]
         },
         {
-            "@id": "https://uri.fiware.org/ns/dataModels#waterLevel",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/waterLevel",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
