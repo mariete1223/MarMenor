@@ -1096,7 +1096,7 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 
 
 
-# Boya
+# Buoy
 
 
 -  `address`: The mailing address
@@ -1159,7 +1159,7 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 
 
 
-# Rambla
+# Ravine
 
 
 -  `address`: The mailing address
