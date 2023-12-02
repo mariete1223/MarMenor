@@ -1090,106 +1090,36 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `closeMeasurements`: A list of the devices that take measures close to this Boya
    -  Attribute type: **Property**. 
    -  Optional
--  `temperature`: Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `temperatureValues`: A list of the temperature values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `chlorophyll`: An individual representing the property conductitivity
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `chlorophyllValues`: A list of the chlorophyll values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `conductitivity`: An individual representing the property conductitivity
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `conductivityValues`: A list of the conductivity values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `organicMatter`: Property related to some measurements that are characterized by a certain value that is measured in a humidity unit
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `organicMatterValues`: A list of the organic matter values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `oxygen`: An individual representing the property oxygen in given location
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `oxygenValues`: A list of the oxygen values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `pH`: An individual representing the property pH
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `pHValues`: A list of the pH values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `polyethylene`: The amount of polyethylene present in the water
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `polyethyleneValues`: A list of the polyethylene values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `salinity`: An individual representing the property salinity
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `salinityValues`: A list of the salinity values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `transparency`: Property related to some measurements that are characterized by a certain value that is measured in a transparency unit (Revisar)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `transparencyValues`: A list of the transparency values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
--  `turbidity`: An individual representing the property turbidity
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+-  `turbidityValues`: A list of the turbidity values measured by this Boya
+   -  Attribute type: **Property**. 
    -  Optional
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 

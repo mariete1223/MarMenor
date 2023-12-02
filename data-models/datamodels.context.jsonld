@@ -3,176 +3,212 @@
         "type": "@type",
         "id": "@id",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
-        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "fiware": "https://uri.fiware.org/ns/dataModels#",
         "schema": "https://schema.org/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "Boya": "fiware:Boya",
-        "ChlorophyllSensor": "fiware:ChlorophyllSensor",
-        "ConductivitySensor": "fiware:ConductivitySensor",
-        "HumiditySensor": "fiware:HumiditySensor",
-        "OrganicMatterSensor": "fiware:OrganicMatterSensor",
-        "OxygenSensor": "fiware:OxygenSensor",
-        "PhSensor": "fiware:PhSensor",
-        "PiezometricLevelSensor": "fiware:PiezometricLevelSensor",
-        "PiezometricPoint": "fiware:PiezometricPoint",
-        "PolyethyleneSensor": "fiware:PolyethyleneSensor",
-        "PrecipitationSensor": "fiware:PrecipitationSensor",
-        "PressureSensor": "fiware:PressureSensor",
-        "Rambla": "fiware:Rambla",
-        "SalinitySensor": "fiware:SalinitySensor",
-        "TdsSensor": "fiware:TdsSensor",
-        "TemperatureSensor": "fiware:TemperatureSensor",
-        "TransparencySensor": "fiware:TransparencySensor",
-        "TurbiditySensor": "fiware:TurbiditySensor",
-        "VolumeSensor": "fiware:VolumeSensor",
-        "WaterFlowSensor": "fiware:WaterFlowSensor",
-        "WaterLevelSensor": "fiware:WaterLevelSensor",
-        "address": "fiware:address",
+        "Boya": "https://uri.fiware.org/ns/dataModels#Boya",
+        "ChlorophyllSensor": "https://uri.fiware.org/ns/dataModels#ChlorophyllSensor",
+        "ConductivitySensor": "https://uri.fiware.org/ns/dataModels#ConductivitySensor",
+        "HumiditySensor": "https://uri.fiware.org/ns/dataModels#HumiditySensor",
+        "OrganicMatterSensor": "https://uri.fiware.org/ns/dataModels#OrganicMatterSensor",
+        "OxygenSensor": "https://uri.fiware.org/ns/dataModels#OxygenSensor",
+        "PhSensor": "https://uri.fiware.org/ns/dataModels#PhSensor",
+        "PiezometricLevelSensor": "https://uri.fiware.org/ns/dataModels#PiezometricLevelSensor",
+        "PiezometricPoint": "https://uri.fiware.org/ns/dataModels#PiezometricPoint",
+        "PolyethyleneSensor": "https://uri.fiware.org/ns/dataModels#PolyethyleneSensor",
+        "PrecipitationSensor": "https://uri.fiware.org/ns/dataModels#PrecipitationSensor",
+        "PressureSensor": "https://uri.fiware.org/ns/dataModels#PressureSensor",
+        "Rambla": "https://uri.fiware.org/ns/dataModels#Rambla",
+        "SalinitySensor": "https://uri.fiware.org/ns/dataModels#SalinitySensor",
+        "TdsSensor": "https://uri.fiware.org/ns/dataModels#TdsSensor",
+        "TemperatureSensor": "https://uri.fiware.org/ns/dataModels#TemperatureSensor",
+        "TransparencySensor": "https://uri.fiware.org/ns/dataModels#TransparencySensor",
+        "TurbiditySensor": "https://uri.fiware.org/ns/dataModels#TurbiditySensor",
+        "VolumeSensor": "https://uri.fiware.org/ns/dataModels#VolumeSensor",
+        "WaterFlowSensor": "https://uri.fiware.org/ns/dataModels#WaterFlowSensor",
+        "WaterLevelSensor": "https://uri.fiware.org/ns/dataModels#WaterLevelSensor",
+        "address": "https://uri.fiware.org/ns/dataModels#address",
         "alternateName": {
-            "@id": "fiware:alternateName",
+            "@id": "https://uri.fiware.org/ns/dataModels#alternateName",
             "@type": "xsd:string"
         },
         "areaServed": {
-            "@id": "fiware:areaServed",
+            "@id": "https://uri.fiware.org/ns/dataModels#areaServed",
             "@type": "xsd:string"
         },
         "category": {
-            "@id": "fiware:category",
+            "@id": "https://uri.fiware.org/ns/dataModels#category",
             "@type": "xsd:array"
         },
         "chlorophyll": {
-            "@id": "fiware:chlorophyll",
+            "@id": "https://uri.fiware.org/ns/dataModels#chlorophyll",
             "@type": "xsd:number"
         },
-        "closeMeasurements": {
-            "@id": "fiware:closeMeasurements",
+        "chlorophyllValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#chlorophyllValues",
             "@type": "xsd:array"
         },
-        "conductitivity": {
-            "@id": "fiware:conductitivity",
-            "@type": "xsd:number"
+        "closeMeasurements": {
+            "@id": "https://uri.fiware.org/ns/dataModels#closeMeasurements",
+            "@type": "xsd:array"
         },
         "conductivity": {
-            "@id": "fiware:conductivity",
+            "@id": "https://uri.fiware.org/ns/dataModels#conductivity",
             "@type": "xsd:number"
         },
+        "conductivityValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#conductivityValues",
+            "@type": "xsd:array"
+        },
         "controlledAsset": {
-            "@id": "fiware:controlledAsset",
+            "@id": "https://uri.fiware.org/ns/dataModels#controlledAsset",
             "@type": "@id"
         },
         "controlledProperty": {
-            "@id": "fiware:controlledProperty",
+            "@id": "https://uri.fiware.org/ns/dataModels#controlledProperty",
             "@type": "xsd:array"
         },
         "dataProvider": {
-            "@id": "fiware:dataProvider",
+            "@id": "https://uri.fiware.org/ns/dataModels#dataProvider",
             "@type": "xsd:string"
         },
         "dateLastValueReported": {
-            "@id": "fiware:dateLastValueReported",
+            "@id": "https://uri.fiware.org/ns/dataModels#dateLastValueReported",
             "@type": "xs:dateTime"
         },
         "description": {
-            "@id": "fiware:description",
+            "@id": "https://uri.fiware.org/ns/dataModels#description",
             "@type": "xsd:string"
         },
         "humidity": {
-            "@id": "fiware:humidity",
+            "@id": "https://uri.fiware.org/ns/dataModels#humidity",
             "@type": "xsd:number"
         },
         "location": {
-            "@id": "fiware:location",
+            "@id": "https://uri.fiware.org/ns/dataModels#location",
             "@type": "xsd:undefined"
         },
         "name": {
-            "@id": "fiware:name",
+            "@id": "https://uri.fiware.org/ns/dataModels#name",
             "@type": "xsd:string"
         },
         "nextSection": {
-            "@id": "fiware:nextSection",
+            "@id": "https://uri.fiware.org/ns/dataModels#nextSection",
             "@type": "@id"
         },
         "numberInNetwork": {
-            "@id": "fiware:numberInNetwork",
+            "@id": "https://uri.fiware.org/ns/dataModels#numberInNetwork",
             "@type": "xsd:number"
         },
         "organicMatter": {
-            "@id": "fiware:organicMatter",
+            "@id": "https://uri.fiware.org/ns/dataModels#organicMatter",
             "@type": "xsd:number"
+        },
+        "organicMatterValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#organicMatterValues",
+            "@type": "xsd:array"
         },
         "oxygen": {
-            "@id": "fiware:oxygen",
+            "@id": "https://uri.fiware.org/ns/dataModels#oxygen",
             "@type": "xsd:number"
+        },
+        "oxygenValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#oxygenValues",
+            "@type": "xsd:array"
         },
         "pH": {
-            "@id": "fiware:pH",
+            "@id": "https://uri.fiware.org/ns/dataModels#pH",
             "@type": "xsd:number"
         },
+        "pHValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#pHValues",
+            "@type": "xsd:array"
+        },
         "piezometricLevel": {
-            "@id": "fiware:piezometricLevel",
+            "@id": "https://uri.fiware.org/ns/dataModels#piezometricLevel",
             "@type": "xsd:number"
         },
         "polyethylene": {
-            "@id": "fiware:polyethylene",
+            "@id": "https://uri.fiware.org/ns/dataModels#polyethylene",
             "@type": "xsd:number"
         },
+        "polyethyleneValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#polyethyleneValues",
+            "@type": "xsd:array"
+        },
         "precipitation": {
-            "@id": "fiware:precipitation",
+            "@id": "https://uri.fiware.org/ns/dataModels#precipitation",
             "@type": "xsd:number"
         },
         "pressure": {
-            "@id": "fiware:pressure",
+            "@id": "https://uri.fiware.org/ns/dataModels#pressure",
             "@type": "xsd:number"
         },
         "previousSection": {
-            "@id": "fiware:previousSection",
+            "@id": "https://uri.fiware.org/ns/dataModels#previousSection",
             "@type": "@id"
         },
         "salinity": {
-            "@id": "fiware:salinity",
+            "@id": "https://uri.fiware.org/ns/dataModels#salinity",
             "@type": "xsd:number"
         },
+        "salinityValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#salinityValues",
+            "@type": "xsd:array"
+        },
         "section": {
-            "@id": "fiware:section",
+            "@id": "https://uri.fiware.org/ns/dataModels#section",
             "@type": "xsd:number"
         },
         "source": {
-            "@id": "fiware:source",
+            "@id": "https://uri.fiware.org/ns/dataModels#source",
             "@type": "xsd:string"
         },
         "tds": {
-            "@id": "fiware:tds",
+            "@id": "https://uri.fiware.org/ns/dataModels#tds",
             "@type": "xsd:number"
         },
         "temperature": {
-            "@id": "fiware:temperature",
+            "@id": "https://uri.fiware.org/ns/dataModels#temperature",
             "@type": "xsd:number"
+        },
+        "temperatureValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#temperatureValues",
+            "@type": "xsd:array"
         },
         "transparency": {
-            "@id": "fiware:transparency",
+            "@id": "https://uri.fiware.org/ns/dataModels#transparency",
             "@type": "xsd:number"
+        },
+        "transparencyValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#transparencyValues",
+            "@type": "xsd:array"
         },
         "turbidity": {
-            "@id": "fiware:turbidity",
+            "@id": "https://uri.fiware.org/ns/dataModels#turbidity",
             "@type": "xsd:number"
         },
+        "turbidityValues": {
+            "@id": "https://uri.fiware.org/ns/dataModels#turbidityValues",
+            "@type": "xsd:array"
+        },
         "volume": {
-            "@id": "fiware:volume",
+            "@id": "https://uri.fiware.org/ns/dataModels#volume",
             "@type": "xsd:number"
         },
         "waterFlow": {
-            "@id": "fiware:waterFlow",
+            "@id": "https://uri.fiware.org/ns/dataModels#waterFlow",
             "@type": "xsd:number"
         },
         "waterLevel": {
-            "@id": "fiware:waterLevel",
+            "@id": "https://uri.fiware.org/ns/dataModels#waterLevel",
             "@type": "xsd:number"
         }
     },
     "@graph": [
         {
-            "@id": "fiware:TemperatureSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#TemperatureSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -191,7 +227,7 @@
             }
         },
         {
-            "@id": "fiware:ConductivitySensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#ConductivitySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -210,7 +246,7 @@
             }
         },
         {
-            "@id": "fiware:ChlorophyllSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#ChlorophyllSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -229,7 +265,7 @@
             }
         },
         {
-            "@id": "fiware:HumiditySensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#HumiditySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -248,7 +284,7 @@
             }
         },
         {
-            "@id": "fiware:OrganicMatterSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#OrganicMatterSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -267,7 +303,7 @@
             }
         },
         {
-            "@id": "fiware:OxygenSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#OxygenSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -286,7 +322,7 @@
             }
         },
         {
-            "@id": "fiware:PhSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#PhSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -305,7 +341,7 @@
             }
         },
         {
-            "@id": "fiware:PiezometricLevelSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#PiezometricLevelSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -324,7 +360,7 @@
             }
         },
         {
-            "@id": "fiware:PolyethyleneSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#PolyethyleneSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -343,7 +379,7 @@
             }
         },
         {
-            "@id": "fiware:PrecipitationSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#PrecipitationSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -362,7 +398,7 @@
             }
         },
         {
-            "@id": "fiware:PressureSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#PressureSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -381,7 +417,7 @@
             }
         },
         {
-            "@id": "fiware:SalinitySensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#SalinitySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -400,7 +436,7 @@
             }
         },
         {
-            "@id": "fiware:TdsSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#TdsSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -419,7 +455,7 @@
             }
         },
         {
-            "@id": "fiware:TransparencySensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#TransparencySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -438,7 +474,7 @@
             }
         },
         {
-            "@id": "fiware:TurbiditySensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#TurbiditySensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -457,7 +493,7 @@
             }
         },
         {
-            "@id": "fiware:VolumeSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#VolumeSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -476,7 +512,7 @@
             }
         },
         {
-            "@id": "fiware:WaterFlowSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#WaterFlowSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -495,7 +531,7 @@
             }
         },
         {
-            "@id": "fiware:WaterLevelSensor",
+            "@id": "https://uri.fiware.org/ns/dataModels#WaterLevelSensor",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -514,7 +550,7 @@
             }
         },
         {
-            "@id": "fiware:Boya",
+            "@id": "https://uri.fiware.org/ns/dataModels#Boya",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -533,7 +569,7 @@
             }
         },
         {
-            "@id": "fiware:Rambla",
+            "@id": "https://uri.fiware.org/ns/dataModels#Rambla",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -552,7 +588,7 @@
             }
         },
         {
-            "@id": "fiware:PiezometricPoint",
+            "@id": "https://uri.fiware.org/ns/dataModels#PiezometricPoint",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
@@ -571,7 +607,7 @@
             }
         },
         {
-            "@id": "fiware:temperature",
+            "@id": "https://uri.fiware.org/ns/dataModels#temperature",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -587,7 +623,7 @@
             ]
         },
         {
-            "@id": "fiware:conductivity",
+            "@id": "https://uri.fiware.org/ns/dataModels#conductivity",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -603,7 +639,7 @@
             ]
         },
         {
-            "@id": "fiware:chlorophyll",
+            "@id": "https://uri.fiware.org/ns/dataModels#chlorophyll",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -619,7 +655,7 @@
             ]
         },
         {
-            "@id": "fiware:humidity",
+            "@id": "https://uri.fiware.org/ns/dataModels#humidity",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -635,7 +671,7 @@
             ]
         },
         {
-            "@id": "fiware:organicMatter",
+            "@id": "https://uri.fiware.org/ns/dataModels#organicMatter",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -651,7 +687,7 @@
             ]
         },
         {
-            "@id": "fiware:oxygen",
+            "@id": "https://uri.fiware.org/ns/dataModels#oxygen",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -667,7 +703,7 @@
             ]
         },
         {
-            "@id": "fiware:pH",
+            "@id": "https://uri.fiware.org/ns/dataModels#pH",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -683,7 +719,7 @@
             ]
         },
         {
-            "@id": "fiware:piezometricLevel",
+            "@id": "https://uri.fiware.org/ns/dataModels#piezometricLevel",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -699,7 +735,7 @@
             ]
         },
         {
-            "@id": "fiware:polyethylene",
+            "@id": "https://uri.fiware.org/ns/dataModels#polyethylene",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -715,7 +751,7 @@
             ]
         },
         {
-            "@id": "fiware:precipitation",
+            "@id": "https://uri.fiware.org/ns/dataModels#precipitation",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -731,7 +767,7 @@
             ]
         },
         {
-            "@id": "fiware:pressure",
+            "@id": "https://uri.fiware.org/ns/dataModels#pressure",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -747,7 +783,7 @@
             ]
         },
         {
-            "@id": "fiware:salinity",
+            "@id": "https://uri.fiware.org/ns/dataModels#salinity",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -763,7 +799,7 @@
             ]
         },
         {
-            "@id": "fiware:tds",
+            "@id": "https://uri.fiware.org/ns/dataModels#tds",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -779,7 +815,7 @@
             ]
         },
         {
-            "@id": "fiware:transparency",
+            "@id": "https://uri.fiware.org/ns/dataModels#transparency",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -795,7 +831,7 @@
             ]
         },
         {
-            "@id": "fiware:turbidity",
+            "@id": "https://uri.fiware.org/ns/dataModels#turbidity",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -811,7 +847,7 @@
             ]
         },
         {
-            "@id": "fiware:volume",
+            "@id": "https://uri.fiware.org/ns/dataModels#volume",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -827,7 +863,7 @@
             ]
         },
         {
-            "@id": "fiware:waterFlow",
+            "@id": "https://uri.fiware.org/ns/dataModels#waterFlow",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
@@ -843,7 +879,7 @@
             ]
         },
         {
-            "@id": "fiware:waterLevel",
+            "@id": "https://uri.fiware.org/ns/dataModels#waterLevel",
             "@type": "ngsi-ld:Property",
             "rdfs:comment": [
                 {
