@@ -1192,7 +1192,7 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `previousSection`: Entity ID of the previous section of the rambla, if it does not exist it will be empty
    -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
    -  Optional
--  `type`: NGSI Entity type. It has to be Rambla. One of : `Rambla`.
+-  `type`: NGSI Entity type. It has to be Ravine. One of : `Ravine`.
    -  Attribute type: **Property**. 
    -  Required
 -  `closeMeasurements`: A list of the devices that take measures close to this Rambla

@@ -273,9 +273,9 @@ Ravine:
         model: "https://schema.org/URL"
         type: Relationship
     type:
-      description: NGSI Entity type. It has to be Rambla
+      description: NGSI Entity type. It has to be Ravine
       enum:
-        - Rambla
+        - Ravine
       type: string
       x-ngsi:
         type: Property
