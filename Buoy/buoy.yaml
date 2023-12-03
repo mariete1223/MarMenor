@@ -255,15 +255,15 @@ Buoy:
         type: Property
         uri-prefix: https://smartdatamodels.org/
     type:
-      description: NGSI Entity type. It has to be Device
+      description: NGSI Entity type. It has to be Buoy
       enum:
-        - Device
+        - Buoy
       type: string
       x-ngsi:
         type: Property
         uri-prefix: https://smartdatamodels.org/
     closeMeasurements:
-      description: 'A list of the devices that take measures close to this Boya'
+      description: 'A list of the devices that take measures close to this Buoy'
       type: array
       items:
         anyOf:
@@ -283,123 +283,123 @@ Buoy:
       x-ngsi:
         type: Property
     temperatureValues:
-      description: 'A list of the temperature values measured by this Boya'
+      description: 'A list of the temperature values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            $ref: ./properties-saref.yaml#/temperature
+            $ref: ./genericProperties.yaml#/temperature
       x-ngsi:
         type: Property
     chlorophyllValues:
-      description: 'A list of the chlorophyll values measured by this Boya'
+      description: 'A list of the chlorophyll values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/chlorophyll
+            ref: ./genericProperties.yaml#/chlorophyll
       x-ngsi:
         type: Property
     conductivityValues:
-      description: 'A list of the conductivity values measured by this Boya'
+      description: 'A list of the conductivity values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/conductivity
+            ref: ./genericProperties.yaml#/conductivity
       x-ngsi:
         type: Property
     organicMatterValues:
-      description: 'A list of the organic matter values measured by this Boya'
+      description: 'A list of the organic matter values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/organicMatter
+            ref: ./genericProperties.yaml#/organicMatter
       x-ngsi:
         type: Property
     oxygenValues:
-      description: 'A list of the oxygen values measured by this Boya'
+      description: 'A list of the oxygen values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/oxygen
+            ref: ./genericProperties.yaml#/oxygen
       x-ngsi:
         type: Property
     pHValues:
-      description: 'A list of the pH values measured by this Boya'
+      description: 'A list of the pH values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/pH
+            ref: ./genericProperties.yaml#/pH
       x-ngsi:
         type: Property
     polyethyleneValues:
-      description: 'A list of the polyethylene values measured by this Boya'
+      description: 'A list of the polyethylene values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/polyethylene
+            ref: ./genericProperties.yaml#/polyethylene
       x-ngsi:
         type: Property
     salinityValues:
-      description: 'A list of the salinity values measured by this Boya'
+      description: 'A list of the salinity values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/salininty
+            ref: ./genericProperties.yaml#/salininty
       x-ngsi:
         type: Property
     transparencyValues:
-      description: 'A list of the transparency values measured by this Boya'
+      description: 'A list of the transparency values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/transparency
+            ref: ./genericProperties.yaml#/transparency
       x-ngsi:
         type: Property
     turbidityValues:
-      description: 'A list of the turbidity values measured by this Boya'
+      description: 'A list of the turbidity values measured by this Buoy'
       type: array
       items:
         type: object
         properties:
           depth:
-            $ref: ./properties-saref.yaml#/depth
+            $ref: ./genericProperties.yaml#/depth
           value: 
-            ref: ./properties-saref.yaml#/turbitity
+            ref: ./genericProperties.yaml#/turbitity
       x-ngsi:
         type: Property
   required:

@@ -288,15 +288,15 @@ PiezometricPoint:
       x-ngsi:
           type: Property
     temperature:
-      $ref: ./properties-saref.yaml#/temperature
+      $ref: ./genericProperties.yaml#/temperature
     conductivity:
-      $ref: ./properties-saref.yaml#/conductivity
+      $ref: ./genericProperties.yaml#/conductivity
     piezometricLevel:
-      $ref: ./properties-saref.yaml#/piezometricLevel
+      $ref: ./genericProperties.yaml#/piezometricLevel
     salinity:
-      $ref: ./properties-saref.yaml#/salinity
+      $ref: ./genericProperties.yaml#/salinity
     tds:
-      $ref: ./properties-saref.yaml#/tds
+      $ref: ./genericProperties.yaml#/tds
     
   required:
     - id

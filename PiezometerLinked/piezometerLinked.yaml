@@ -260,9 +260,9 @@ PiezometerLinked:
       x-ngsi:
         type: Property
     type:
-      description: NGSI Entity type. It has to be Rambla
+      description: NGSI Entity type. It has to be PiezometerLinked
       enum:
-        - PiezometricPoint
+        - PiezometerLinked
       type: string
       x-ngsi:
         type: Property
@@ -294,7 +294,7 @@ PiezometerLinked:
         type: object
         properties:
           value: 
-            ref: ./properties-saref.yaml#/waterLevel
+            ref: ./genericProperties.yaml#/waterLevel
       x-ngsi:
         type: Property
     waterFlowValues:
@@ -304,19 +304,19 @@ PiezometerLinked:
         type: object
         properties:
           value: 
-            ref: ./properties-saref.yaml#/flow
+            ref: ./genericProperties.yaml#/flow
       x-ngsi:
         type: Property
     temperature:
-      $ref: ./properties-saref.yaml#/temperature
+      $ref: ./genericProperties.yaml#/temperature
     conductivity:
-      $ref: ./properties-saref.yaml#/conductivity
+      $ref: ./genericProperties.yaml#/conductivity
     piezometricLevel:
-      $ref: ./properties-saref.yaml#/piezometricLevel
+      $ref: ./genericProperties.yaml#/piezometricLevel
     salinity:
-      $ref: ./properties-saref.yaml#/salinity
+      $ref: ./genericProperties.yaml#/salinity
     tds:
-      $ref: ./properties-saref.yaml#/tds
+      $ref: ./genericProperties.yaml#/tds
     
   required:
     - id

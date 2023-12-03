@@ -301,9 +301,9 @@ Ravine:
       x-ngsi:
         type: Property
     temperature:
-      $ref: ./properties-saref.yaml#/temperature
+      $ref: ./genericProperties.yaml#/temperature
     precipitation:
-      $ref: ./properties-saref.yaml#/precipitation
+      $ref: ./genericProperties.yaml#/precipitation
     waterFlowValues:
       description: 'A list of the water flow values measured by this Boya'
       type: array
@@ -311,7 +311,7 @@ Ravine:
         type: object
         properties:
           value: 
-            ref: ./properties-saref.yaml#/flow
+            ref: ./genericProperties.yaml#/flow
       x-ngsi:
         type: Property
     waterLevelValues:
@@ -321,11 +321,11 @@ Ravine:
         type: object
         properties:
           value: 
-            ref: ./properties-saref.yaml#/waterLevel
+            ref: ./genericProperties.yaml#/waterLevel
       x-ngsi:
         type: Property
     humidity:
-      $ref: ./properties-saref.yaml#/humidity
+      $ref: ./genericProperties.yaml#/humidity
   required:
     - id
     - type

@@ -1120,40 +1120,40 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
    -  Attribute type: **Property**. 
    -  Optional
--  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
+-  `type`: NGSI Entity type. It has to be Buoy. One of : `Buoy`.
    -  Attribute type: **Property**. 
    -  Required
--  `closeMeasurements`: A list of the devices that take measures close to this Boya
+-  `closeMeasurements`: A list of the devices that take measures close to this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `temperatureValues`: A list of the temperature values measured by this Boya
+-  `temperatureValues`: A list of the temperature values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `chlorophyllValues`: A list of the chlorophyll values measured by this Boya
+-  `chlorophyllValues`: A list of the chlorophyll values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `conductivityValues`: A list of the conductivity values measured by this Boya
+-  `conductivityValues`: A list of the conductivity values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `organicMatterValues`: A list of the organic matter values measured by this Boya
+-  `organicMatterValues`: A list of the organic matter values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `oxygenValues`: A list of the oxygen values measured by this Boya
+-  `oxygenValues`: A list of the oxygen values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `pHValues`: A list of the pH values measured by this Boya
+-  `pHValues`: A list of the pH values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `polyethyleneValues`: A list of the polyethylene values measured by this Boya
+-  `polyethyleneValues`: A list of the polyethylene values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `salinityValues`: A list of the salinity values measured by this Boya
+-  `salinityValues`: A list of the salinity values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `transparencyValues`: A list of the transparency values measured by this Boya
+-  `transparencyValues`: A list of the transparency values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
--  `turbidityValues`: A list of the turbidity values measured by this Boya
+-  `turbidityValues`: A list of the turbidity values measured by this Buoy
    -  Attribute type: **Property**. 
    -  Optional
 
