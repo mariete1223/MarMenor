@@ -93,6 +93,10 @@
             "@id": "ngsi-ld:location",
             "@type": "xsd:undefined"
         },
+        "measureType": {
+            "@id": "https://smartdatamodels.org/measureType",
+            "@type": "xsd:array"
+        },
         "name": {
             "@id": "https://smartdatamodels.org/name",
             "@type": "xsd:string"

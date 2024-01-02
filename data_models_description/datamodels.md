@@ -14,6 +14,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -31,7 +34,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -75,6 +78,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -92,7 +98,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -136,6 +142,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -153,7 +162,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -197,6 +206,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -214,7 +226,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -258,6 +270,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -275,7 +290,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -319,6 +334,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -336,7 +354,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -380,6 +398,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -397,7 +418,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -441,6 +462,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -458,7 +482,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -502,6 +526,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -519,7 +546,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -563,6 +590,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -580,7 +610,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -624,6 +654,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -641,7 +674,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -685,6 +718,9 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -702,7 +738,7 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -746,6 +782,9 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -763,7 +802,7 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -807,6 +846,9 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -824,7 +866,7 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -868,6 +910,9 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -885,7 +930,7 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -929,6 +974,9 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -946,7 +994,7 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -990,6 +1038,9 @@ A device that consists of a sensor, has category `Sensor` and measures the flow 
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -1007,7 +1058,7 @@ A device that consists of a sensor, has category `Sensor` and measures the flow 
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -1051,6 +1102,9 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
 -  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
    -  Attribute type: **Property**. [Text](https://schema.org/Text)
    -  Required
@@ -1068,7 +1122,7 @@ A device that consists of a sensor, has category Sensor and is used to measure t
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -1110,7 +1164,7 @@ A device that consists of a sensor, has category Sensor and is used to measure t
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -1173,7 +1227,7 @@ A device that consists of a sensor, has category Sensor and is used to measure t
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional
@@ -1257,7 +1311,7 @@ A device that consists of a sensor, has category Sensor and is used to measure t
    -  Optional
 -  `identifier`: Unique identifier of the entity
    -  Attribute type: **Property**. 
-   -  Optional
+   -  Required
 -  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
    -  Attribute type: **GeoProperty**. 
    -  Optional

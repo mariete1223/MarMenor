@@ -43,6 +43,7 @@
         "humidity": "https://smartdatamodels.org/humidity",
         "identifier": "https://smartdatamodels.org/identifier",
         "location": "ngsi-ld:location",
+        "measureType": "https://smartdatamodels.org/measureType",
         "measurementPlace": "https://smartdatamodels.org/measurementPlace",
         "name": "https://smartdatamodels.org/name",
         "nextSection": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/nextSection",
