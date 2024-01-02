@@ -71,6 +71,18 @@ SensorDevice:
         model: https://schema.org/Text
         type: Property
         uri-prefix: https://smartdatamodels.org/
+    measureType:
+      description: "SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''"
+      items:
+        enum:
+          - singleValue
+          - multipleValue
+        type: string
+      type: array
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+        uri-prefix: https://smartdatamodels.org/
     controlledProperty:
       description: 'Anything that can be sensed, measured or controlled by. Enum:''conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'''
       items:
@@ -334,6 +346,7 @@ SensorDevice:
     - identifier
     - type
     - controlledProperty
+    - measureType
   type: object
   x-derived-from: ""
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'

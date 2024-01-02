@@ -2,292 +2,573 @@ components:
   schemas:
     TemperatureSensor:
       type: object
-      required:
-        -  temperature
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
-
+      
       description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing temperature`.
+       A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing temperature, it returns one or multiple value.
 
-      properties:
-        temperature:
-          $ref: ./genericProperties.yaml#/temperature
+      oneOf:
+        - properties:
+            temperatureValues:
+              description: 'A list of the conductivity values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/temperature
+              x-ngsi:
+                type: Property
+          required:
+            - temperatureValues
+        - properties:
+            conductivity:
+              $ref: ./genericProperties.yaml#/temperature
+          required:
+            - temperature
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     ConductivitySensor:
       type: object
-      required:
-        -  conductivity
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing conductivity`.
-      
-      properties:
-        conductivity:
-          $ref: ./genericProperties.yaml#/conductivity
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing conductivity, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            conductivityValues:
+              description: 'A list of the conductivity values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/conductivity
+              x-ngsi:
+                type: Property
+          required:
+            - conductivityValues
+        - properties:
+            conductivity:
+              $ref: ./genericProperties.yaml#/conductivity
+          required:
+            - conductivity
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     ChlorophyllSensor:
       type: object
-      required:
-        -  chlorophyll
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing chlorophyll`.
-      
-      properties:
-        chlorophyll:
-          $ref: ./genericProperties.yaml#/chlorophyll
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing chlorophyll, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            chlorophyllValues:
+              description: 'A list of the chlorophyll values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/chlorophyll
+              x-ngsi:
+                type: Property
+          required:
+            - chlorophyllValues
+        - properties:
+            chlorophyll:
+              $ref: ./genericProperties.yaml#/chlorophyll
+          required:
+            - chlorophyll
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     HumiditySensor:
       type: object
-      required:
-        -  humidity
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing humidity`.
-      
-      properties:
-        humidity:
-          $ref: ./genericProperties.yaml#/humidity
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing humidity, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            humidityValues:
+              description: 'A list of the humidity values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/humidity
+              x-ngsi:
+                type: Property
+          required:
+            - humidityValues
+        - properties:
+            humidity:
+              $ref: ./genericProperties.yaml#/humidity
+          required:
+            - humidity
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     OrganicMatterSensor:
       type: object
-      required:
-        -  organicMatter
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing organicMatter`.
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing organicMatter, it returns one or multiple value.
       
-      properties:
-        organicMatter:
-          $ref: ./genericProperties.yaml#/organicMatter
+      oneOf:
+        - properties:
+            organicMatterValues:
+              description: 'A list of the organicMatter values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/organicMatter
+              x-ngsi:
+                type: Property
+          required:
+            - organicMatterValues
+        - properties:
+            organicMatter:
+              $ref: ./genericProperties.yaml#/organicMatter
+          required:
+            - organicMatter
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     OxygenSensor:
       type: object
-      required:
-        -  oxygen
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing oxygen`.
-      
-      properties:
-        oxygen:
-          $ref: ./genericProperties.yaml#/oxygen
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing oxygen, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            oxygenValues:
+              description: 'A list of the oxygen values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/oxygen
+              x-ngsi:
+                type: Property
+          required:
+            - oxygenValues
+        - properties:
+            oxygen:
+              $ref: ./genericProperties.yaml#/oxygen
+          required:
+            - oxygen
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     PhSensor:
       type: object
-      required:
-        -  pH
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pH`.
-
-      properties:
-        pH:
-          $ref: ./genericProperties.yaml#/pH
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pH, it returns one or multiple value.
+      
+      oneOf:
+        - properties:
+            pHValues:
+              description: 'A list of the pH values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/pH
+              x-ngsi:
+                type: Property
+          required:
+            - pHValues
+        - properties:
+            pH:
+              $ref: ./genericProperties.yaml#/pH
+          required:
+            - pH
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     PiezometricLevelSensor:
       type: object
-      required:
-        -  piezometricLevel
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing piezometricLevel`.
-      
-      properties:
-        piezometricLevel:
-          $ref: ./genericProperties.yaml#/piezometricLevel
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing piezometricLevel, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            piezometricLevelValues:
+              description: 'A list of the piezometricLevel values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/piezometricLevel
+              x-ngsi:
+                type: Property
+          required:
+            - piezometricLevelValues
+        - properties:
+            piezometricLevel:
+              $ref: ./genericProperties.yaml#/piezometricLevel
+          required:
+            - piezometricLevel
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     PolyethyleneSensor:
       type: object
-      required:
-        -  polyethylene
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing polyethylene`.
-      
-      properties:
-        polyethylene:
-          $ref: ./genericProperties.yaml#/polyethylene
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing polyethylene, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            polyethyleneValues:
+              description: 'A list of the polyethylene values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/polyethylene
+              x-ngsi:
+                type: Property
+          required:
+            - polyethyleneValues
+        - properties:
+            polyethylene:
+              $ref: ./genericProperties.yaml#/polyethylene
+          required:
+            - polyethylene
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     PrecipitationSensor:
       type: object
-      required:
-        -  precipitation
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing precipitation`.
-      
-      properties:
-        precipitation:
-          $ref: ./genericProperties.yaml#/precipitation
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing precipitation, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            precipitationValues:
+              description: 'A list of the precipitation values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/precipitation
+              x-ngsi:
+                type: Property
+          required:
+            - precipitationValues
+        - properties:
+            precipitation:
+              $ref: ./genericProperties.yaml#/precipitation
+          required:
+            - precipitation
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     PressureSensor:
       type: object
-      required:
-        -  pressure
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pressure`.
-      
-      properties:
-        pressure:
-          $ref: ./genericProperties.yaml#/pressure
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pressure, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            pressureValues:
+              description: 'A list of the pressure values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/pressure
+              x-ngsi:
+                type: Property
+          required:
+            - pressureValues
+        - properties:
+            pressure:
+              $ref: ./genericProperties.yaml#/pressure
+          required:
+            - pressure
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     SalinitySensor:
       type: object
-      required:
-        -  salinity
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of salinity`.
-      
-      properties:
-        salinity:
-          $ref: ./genericProperties.yaml#/salinity
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing salinity, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            salinityValues:
+              description: 'A list of the salinity values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/salinity
+              x-ngsi:
+                type: Property
+          required:
+            - salinityValues
+        - properties:
+            salinity:
+              $ref: ./genericProperties.yaml#/salinity
+          required:
+            - salinity
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     TdsSensor:
       type: object
-      required:
-        -  tds
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
       description: >
-        A device that consists of a sensor, has category `Sensor` and is used to measure the total amount of mobile charged ions, including minerals, salts or metals dissolved in a given volume of water, expressed in units of mg per unit volume of water (mg/L), also referred to as parts per million (ppm).
-      
-      properties:
-        tds:
-          $ref: ./genericProperties.yaml#/tds
+        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing tds, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            tdsValues:
+              description: 'A list of the tds values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/tds
+              x-ngsi:
+                type: Property
+          required:
+            - tdsValues
+        - properties:
+            tds:
+              $ref: ./genericProperties.yaml#/tds
+          required:
+            - tds
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     TransparencySensor:
       type: object
-      required:
-        -  transparency
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
       description: >
-        A device that consists of a sensor, has category `Sensor` and is used to measure the transparency of the water.
-      
-      properties:
-        transparency:
-          $ref: ./genericProperties.yaml#/transparency
+        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing transparency, it returns one or multiple value.
+    
+      oneOf:
+        - properties:
+            transparencyValues:
+              description: 'A list of the transparency values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/transparency
+              x-ngsi:
+                type: Property
+          required:
+            - transparencyValues
+        - properties:
+            transparency:
+              $ref: ./genericProperties.yaml#/transparency
+          required:
+            - transparency
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     TurbiditySensor:
       type: object
-      required:
-        -  turbidity
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
       description: >
-        A device that consists of a sensor, has category `Sensor` and is used to measure the turbidity of the water.
-      
-      properties:
-        turbidity:
-          $ref: ./genericProperties.yaml#/turbidity  
+        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing turbidity, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            turbidityValues:
+              description: 'A list of the turbidity values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/turbidity
+              x-ngsi:
+                type: Property
+          required:
+            - turbidityValues
+        - properties:
+            turbidity:
+              $ref: ./genericProperties.yaml#/turbidity
+          required:
+            - turbidity
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     VolumeSensor:
       type: object
-      required:
-        -  volume
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
       description: >
-        A device that consists of a sensor, has category `Sensor` and is used to measure the volume of the water.
-      
-      properties:
-        volume:
-          $ref: ./genericProperties.yaml#/volume
+        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing volume, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            volumeValues:
+              description: 'A list of the volume values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/volume
+              x-ngsi:
+                type: Property
+          required:
+            - volumeValues
+        - properties:
+            volume:
+              $ref: ./genericProperties.yaml#/volume
+          required:
+            - volume
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     WaterFlowSensor:
       type: object
-      required:
-        -  waterFlow
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and measures the flow of water.
-      
-      properties:
-        waterFlow:
-          $ref: ./genericProperties.yaml#/flow
+      description: >  
+        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing waterFlow, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            flowValues:
+              description: 'A list of the waterFlow values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/flow
+              x-ngsi:
+                type: Property
+          required:
+            - flowValues
+        - properties:
+            flow:
+              $ref: ./genericProperties.yaml#/flow
+          required:
+            - flow
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     WaterLevelSensor:
       type: object
-      required:
-        -  waterLevel
       allOf:
         - $ref: ./sensorDevice.yaml#/SensorDevice
 
       description: >
-        A device that consists of a sensor, has category Sensor and is used to measure the level of the water.
-      
-      properties:
-        waterLevel:
-          $ref: ./genericProperties.yaml#/waterLevel
+        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing waterLevel, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            waterLevelValues:
+              description: 'A list of the waterLevel values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/waterLevel
+              x-ngsi:
+                type: Property
+                uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
+          required:
+            - waterLevelValues
+        - properties:
+            waterLevel:
+              $ref: ./genericProperties.yaml#/waterLevel
+              x-ngsi:
+                type: Property
+                uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
+          required:
+            - waterLevel
       x-ngsi:
-        url-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     Buoy:
       type: object
       allOf:
-        - $ref: ./buoy.yaml#/Buoy#
+        - $ref: ./buoy.yaml#/Buoy
       x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/
     Ravine:
       type: object
       allOf:
-        - $ref: ./ravine.yaml#/Ravine#
+        - $ref: ./ravine.yaml#/Ravine
       x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/
     PiezometricPoint:
       type: object
       allOf:
-        - $ref: ./piezometricPoint.yaml#/PiezometricPoint#
+        - $ref: ./piezometricPoint.yaml#/PiezometricPoint
       x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/
 info: 
   description: "Model Definition for Mar Menor enviroment"
   title: Smart Devices Mar Menor Data Models
