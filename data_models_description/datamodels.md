@@ -1,6 +1,6 @@
 # TemperatureSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing temperature`.
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing temperature, it returns one or multiple value.
 
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
@@ -47,25 +47,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `temperature`: Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # ConductivitySensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing conductivity`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing conductivity, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -111,25 +98,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `conductivity`: An individual representing the property conductitivity
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # ChlorophyllSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing chlorophyll`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing chlorophyll, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -175,25 +149,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `chlorophyll`: An individual representing the property conductitivity
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # HumiditySensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing humidity`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing humidity, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -239,25 +200,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `humidity`: An individual representing the relative humidity in a given location
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # OrganicMatterSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing organicMatter`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing organicMatter, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -303,25 +251,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `organicMatter`: Property related to some measurements that are characterized by a certain value that is measured in a humidity unit
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # OxygenSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing oxygen`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing oxygen, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -367,25 +302,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `oxygen`: An individual representing the property oxygen in given location
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # PhSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pH`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pH, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -431,25 +353,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `pH`: An individual representing the property pH
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # PiezometricLevelSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing piezometricLevel`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing piezometricLevel, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -495,25 +404,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `piezometricLevel`: It defines the level to which water would rise if it were allowed to flow freely, measured in meters above the sea level (msnm)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # PolyethyleneSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing polyethylene`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing polyethylene, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -559,25 +455,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `polyethylene`: The amount of polyethylene present in the water
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # PrecipitationSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing precipitation`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing precipitation, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -623,25 +506,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `precipitation`: The amount of water falling in the soil by natural process (e.g. rain).
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # PressureSensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pressure`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pressure, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -687,25 +557,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `pressure`: Property related to some measurements that are characterized by a certain value that is measured in a pressure unit (bar or pascal)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # SalinitySensor
 
-A device that consists of a sensor, has category `Sensor` and is used for the purpose of salinity`.
-
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing salinity, it returns one or multiple value.
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
@@ -751,24 +608,12 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `salinity`: An individual representing the property salinity
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # TdsSensor
 
-A device that consists of a sensor, has category `Sensor` and is used to measure the total amount of mobile charged ions, including minerals, salts or metals dissolved in a given volume of water, expressed in units of mg per unit volume of water (mg/L), also referred to as parts per million (ppm).
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing tds, it returns one or multiple value.
 
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
@@ -815,24 +660,12 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `tds`: An individual representing the property total disolved solids
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # TransparencySensor
 
-A device that consists of a sensor, has category `Sensor` and is used to measure the transparency of the water.
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing transparency, it returns one or multiple value.
 
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
@@ -879,24 +712,12 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `transparency`: Property related to some measurements that are characterized by a certain value that is measured in a transparency unit (Revisar)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # TurbiditySensor
 
-A device that consists of a sensor, has category `Sensor` and is used to measure the turbidity of the water.
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing turbidity, it returns one or multiple value.
 
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
@@ -943,24 +764,12 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `turbidity`: An individual representing the property turbidity
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # VolumeSensor
 
-A device that consists of a sensor, has category `Sensor` and is used to measure the volume of the water.
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing volume, it returns one or multiple value.
 
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
@@ -1007,24 +816,12 @@ A device that consists of a sensor, has category `Sensor` and is used to measure
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `volume`: Property related to some measurements that are characterized by a certain value that is measured in a volume unit (liter or cubic_meter)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # WaterFlowSensor
 
-A device that consists of a sensor, has category `Sensor` and measures the flow of water.
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing waterFlow, it returns one or multiple value.
 
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
@@ -1071,24 +868,12 @@ A device that consists of a sensor, has category `Sensor` and measures the flow 
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `waterFlow`: Property related to some measurements that are characterized by a certain value that is measured in a waterFlow unit (liter_per_second, liter_per_minute, or liter_per_hour)
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
 # WaterLevelSensor
 
-A device that consists of a sensor, has category Sensor and is used to measure the level of the water.
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing waterLevel, it returns one or multiple value.
 
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
@@ -1135,18 +920,6 @@ A device that consists of a sensor, has category Sensor and is used to measure t
 -  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
    -  Attribute type: **Property**. 
    -  Required
--  `waterLevel`: It defines the level in meters of the measured property
-   -  Attribute type: **Property**. [Number](https://schema.org/Number)
-   -  Required
-   -  Meta Data: 
-       -  `providedBy`: The device that sent this reading
-           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
-       -  `observedAt`: A timestamp which denotes when the reading was taken
-           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
-       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 
 
 
