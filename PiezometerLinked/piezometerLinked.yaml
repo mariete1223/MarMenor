@@ -319,7 +319,7 @@ PiezometerLinked:
       $ref: ./genericProperties.yaml#/tds
     
   required:
-    - id
+    - identifier
     - type
   type: object
   x-derived-from: ""

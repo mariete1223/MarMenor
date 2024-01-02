@@ -403,7 +403,7 @@ Buoy:
       x-ngsi:
         type: Property
   required:
-    - id
+    - identifier
     - type
   type: object
   x-derived-from: ""
