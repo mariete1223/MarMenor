@@ -5,7 +5,8 @@ const sensorHistoric = require("../controllers/sensorHistoric");
 
 
 
-
+router.route("/")
+    .get(catchAsync(sensorHistoric.getNumberRequests))
 
 router.route("/:idSensor")
     .get(catchAsync(sensorHistoric.getSensorHistoric))

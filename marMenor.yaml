@@ -10,6 +10,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             temperatureValues:
               description: 'A list of the conductivity values measured by this Sensor'
               type: array
@@ -25,7 +39,7 @@ components:
           required:
             - temperatureValues
         - properties:
-            conductivity:
+            temperature:
               $ref: ./genericProperties.yaml#/temperature
           required:
             - temperature
@@ -40,6 +54,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             conductivityValues:
               description: 'A list of the conductivity values measured by this Sensor'
               type: array
@@ -70,6 +98,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             chlorophyllValues:
               description: 'A list of the chlorophyll values measured by this Sensor'
               type: array
@@ -100,6 +142,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             humidityValues:
               description: 'A list of the humidity values measured by this Sensor'
               type: array
@@ -130,6 +186,20 @@ components:
       
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             organicMatterValues:
               description: 'A list of the organicMatter values measured by this Sensor'
               type: array
@@ -160,6 +230,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             oxygenValues:
               description: 'A list of the oxygen values measured by this Sensor'
               type: array
@@ -190,6 +274,20 @@ components:
       
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             pHValues:
               description: 'A list of the pH values measured by this Sensor'
               type: array
@@ -220,6 +318,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             piezometricLevelValues:
               description: 'A list of the piezometricLevel values measured by this Sensor'
               type: array
@@ -250,6 +362,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             polyethyleneValues:
               description: 'A list of the polyethylene values measured by this Sensor'
               type: array
@@ -280,6 +406,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             precipitationValues:
               description: 'A list of the precipitation values measured by this Sensor'
               type: array
@@ -310,6 +450,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             pressureValues:
               description: 'A list of the pressure values measured by this Sensor'
               type: array
@@ -340,6 +494,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             salinityValues:
               description: 'A list of the salinity values measured by this Sensor'
               type: array
@@ -371,6 +539,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             tdsValues:
               description: 'A list of the tds values measured by this Sensor'
               type: array
@@ -402,6 +584,20 @@ components:
     
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             transparencyValues:
               description: 'A list of the transparency values measured by this Sensor'
               type: array
@@ -433,6 +629,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             turbidityValues:
               description: 'A list of the turbidity values measured by this Sensor'
               type: array
@@ -464,6 +674,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             volumeValues:
               description: 'A list of the volume values measured by this Sensor'
               type: array
@@ -495,6 +719,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             flowValues:
               description: 'A list of the waterFlow values measured by this Sensor'
               type: array
@@ -526,6 +764,20 @@ components:
 
       oneOf:
         - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
             waterLevelValues:
               description: 'A list of the waterLevel values measured by this Sensor'
               type: array

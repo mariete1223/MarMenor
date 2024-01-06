@@ -12,7 +12,7 @@ rm Dockerfile
 rm docker-compose.yml
 
 # Copiar los contenidos desde /mnt/c/Users/marie/OneDrive/Escritorio/Antiguo\ ordenador/Universidad/Master\ 1º/TFM/NGSI-LD/nodeServer/
-cp -R /mnt/c/Users/marie/OneDrive/Escritorio/Antiguo\ ordenador/Universidad/Master\ 1º/TFM/NGSI-LD/nodeServer/* .
+cp -R /mnt/c/Users/marie/Desktop/Github/Github/MarMenor/marMenorProyectoDocker/* .
 
 ./services orion
 
