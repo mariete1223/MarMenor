@@ -529,6 +529,127 @@ components:
             - salinity
       x-ngsi:
         uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
+
+    AtmosphericPressureSensor:
+      type: object
+      allOf:
+        - $ref: ./sensorDevice.yaml#/SensorDevice
+
+      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing atmospheric pressure, it returns one or multiple value.
+
+      oneOf:
+        - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/URL"
+                type: Relationship
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+              x-ngsi: 
+                model: "https://schema.org/DateTime"
+                type: Property
+            atmosphericPressureValues:
+              description: 'A list of the salinity values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  depth:
+                    $ref: ./genericProperties.yaml#/depth
+                  value: 
+                    $ref: ./genericProperties.yaml#/atmosphericPressure
+              x-ngsi:
+                type: Property
+          required:
+            - atmosphericPressureValues
+        - properties:
+            atmosphericPressure:
+              $ref: ./genericProperties.yaml#/atmosphericPressure
+          required:
+            - atmosphericPressure
+      x-ngsi:
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
+    WindDirectionSensor:
+      type: object
+      allOf:
+        - $ref: ./sensorDevice.yaml#/SensorDevice
+
+      description: >
+        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind direction, it returns one or multiple value.
+    
+      oneOf:
+        - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+            windDirectionValues:
+              description: 'A list of the wind direction values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  value: 
+                    $ref: ./genericProperties.yaml#/windDirection
+              x-ngsi:
+                type: Property
+          required:
+            - windDirectionValues
+        - properties:
+            windDirection:
+              $ref: ./genericProperties.yaml#/windDirection
+          required:
+            - windDirection
+      x-ngsi:
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
+        
+    WindSpeedSensor:
+      type: object
+      allOf:
+        - $ref: ./sensorDevice.yaml#/SensorDevice
+
+      description: >
+        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind speed, it returns one or multiple value.
+    
+      oneOf:
+        - properties:
+            providedBy:
+              description: "The device that sent this reading\n"
+              format: URL
+              type: string
+            observedAt:
+              description: "A timestamp which denotes when the reading was taken\n"
+              format: date-time
+              type: string
+            windSpeedValues:
+              description: 'A list of the wind speed values measured by this Sensor'
+              type: array
+              items:
+                type: object
+                properties:
+                  value: 
+                    $ref: ./genericProperties.yaml#/windSpeed
+              x-ngsi:
+                type: Property
+          required:
+            - windSpeedValues
+        - properties:
+            windSpeed:
+              $ref: ./genericProperties.yaml#/windSpeed
+          required:
+            - windSpeed
+      x-ngsi:
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
+
     TdsSensor:
       type: object
       allOf:
