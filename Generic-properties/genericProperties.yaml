@@ -172,6 +172,30 @@ waterLevel:
   type: number
   format: float
   description: It defines the level in meters of the measured property
+windDirection:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+    uri-prefix: https://smartdatamodels.org/
+  type: number
+  format: float
+  description: It defines the direction of the weather vane
+atmosphericPressure:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+    uri-prefix: https://smartdatamodels.org/
+  type: number
+  format: float
+  description: It defines the observed air (atmospheric or barometric) pressure
+windSpeed:
+  x-ngsi:
+    model: 'https://schema.org/Number'
+    properties: *commonMeta
+    uri-prefix: https://smartdatamodels.org/
+  type: number
+  format: float
+  description: It defines the intensity of the wind
 depth:
   x-ngsi:
     model: 'https://schema.org/Number'
@@ -179,4 +203,4 @@ depth:
     uri-prefix: https://smartdatamodels.org/
   type: number
   format: float
-  description: It defines the depth where the measure was taken
+  description: It defines the depth at which the measurement is taken

@@ -3,7 +3,7 @@
         "type": "@type",
         "id": "@id",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
-        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "fiware": "https://uri.fiware.org/ns/dataModels#",
         "schema": "https://schema.org/",
         "Buoy": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/Buoy",
         "ChlorophyllSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ChlorophyllSensor",
@@ -29,6 +29,7 @@
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "atmosphericPressure": "https://smartdatamodels.org/atmosphericPressure",
         "category": "https://smartdatamodels.org/category",
         "chlorophyllValues": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/chlorophyllValues",
         "closeMeasurements": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/closeMeasurements",
@@ -63,6 +64,8 @@
         "transparencyValues": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/transparencyValues",
         "turbidityValues": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/turbidityValues",
         "waterFlowValues": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterFlowValues",
-        "waterLevelValues": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterLevelValues"
+        "waterLevelValues": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterLevelValues",
+        "windDirection": "https://smartdatamodels.org/windDirection",
+        "windSpeed": "https://smartdatamodels.org/windSpeed"
     }
 }

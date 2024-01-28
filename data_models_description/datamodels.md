@@ -1049,6 +1049,42 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
        -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `windDirection`: It defines the direction of the weather vane
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `atmosphericPressure`: It defines the observed air (atmospheric or barometric) pressure
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `windSpeed`: It defines the intensity of the wind
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `waterFlowValues`: A list of the water flow values measured by this Boya
    -  Attribute type: **Property**. 
    -  Optional

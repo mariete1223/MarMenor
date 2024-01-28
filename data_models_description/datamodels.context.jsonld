@@ -3,7 +3,7 @@
         "type": "@type",
         "id": "@id",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
-        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "fiware": "https://uri.fiware.org/ns/dataModels#",
         "schema": "https://schema.org/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -37,17 +37,21 @@
             "@id": "https://smartdatamodels.org/areaServed",
             "@type": "xsd:string"
         },
+        "atmosphericPressure": {
+            "@id": "https://smartdatamodels.org/atmosphericPressure",
+            "@type": "xsd:number"
+        },
         "category": {
             "@id": "https://smartdatamodels.org/category",
             "@type": "xsd:array"
         },
         "chlorophyllValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/chlorophyllValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "closeMeasurements": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/closeMeasurements",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "conductivity": {
             "@id": "https://smartdatamodels.org/conductivity",
@@ -55,7 +59,7 @@
         },
         "conductivityValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/conductivityValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "controlledAsset": {
             "@id": "https://smartdatamodels.org/controlledAsset",
@@ -107,15 +111,15 @@
         },
         "organicMatterValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/organicMatterValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "oxygenValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/oxygenValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "pHValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/pHValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "piezometricLevel": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/piezometricLevel",
@@ -123,7 +127,7 @@
         },
         "polyethyleneValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/polyethyleneValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "precipitation": {
             "@id": "https://smartdatamodels.org/precipitation",
@@ -139,7 +143,7 @@
         },
         "salinityValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/salinityValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "section": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/section",
@@ -159,23 +163,31 @@
         },
         "temperatureValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/temperatureValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "transparencyValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/transparencyValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "turbidityValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/turbidityValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "waterFlowValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterFlowValues",
-            "@type": "@list"
+            "@type": "xsd:array"
         },
         "waterLevelValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterLevelValues",
-            "@type": "@list"
+            "@type": "xsd:array"
+        },
+        "windDirection": {
+            "@id": "https://smartdatamodels.org/windDirection",
+            "@type": "xsd:number"
+        },
+        "windSpeed": {
+            "@id": "https://smartdatamodels.org/windSpeed",
+            "@type": "xsd:number"
         }
     },
     "@graph": [

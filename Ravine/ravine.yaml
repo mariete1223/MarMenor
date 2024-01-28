@@ -304,6 +304,12 @@ Ravine:
       $ref: ./genericProperties.yaml#/temperature
     precipitation:
       $ref: ./genericProperties.yaml#/precipitation
+    windDirection:
+      $ref: ./genericProperties.yaml#/windDirection
+    atmosphericPressure:
+      $ref: ./genericProperties.yaml#/atmosphericPressure
+    windSpeed:
+      $ref: ./genericProperties.yaml#/windSpeed
     waterFlowValues:
       description: 'A list of the water flow values measured by this Boya'
       type: array
