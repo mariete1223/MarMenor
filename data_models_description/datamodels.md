@@ -611,6 +611,161 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
 
 
 
+# AtmosphericPressureSensor
+
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing atmospheric pressure, it returns one or multiple value.
+-  `address`: The mailing address
+   -  Attribute type: **Property**. [address](https://schema.org/address)
+   -  Optional
+-  `alternateName`: An alternative name for this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `areaServed`: The geographic area where a service or offered item is provided
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+   -  Optional
+-  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `dateLastValueReported`: A timestamp which denotes the last time when the device successfully reported data to the cloud
+   -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+   -  Optional
+-  `description`: A description of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `identifier`: Unique identifier of the entity
+   -  Attribute type: **Property**. 
+   -  Required
+-  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+   -  Attribute type: **GeoProperty**. 
+   -  Optional
+-  `name`: The name of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
+   -  Attribute type: **Property**. 
+   -  Required
+
+
+
+# WindDirectionSensor
+
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind direction, it returns one or multiple value.
+
+-  `address`: The mailing address
+   -  Attribute type: **Property**. [address](https://schema.org/address)
+   -  Optional
+-  `alternateName`: An alternative name for this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `areaServed`: The geographic area where a service or offered item is provided
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+   -  Optional
+-  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `dateLastValueReported`: A timestamp which denotes the last time when the device successfully reported data to the cloud
+   -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+   -  Optional
+-  `description`: A description of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `identifier`: Unique identifier of the entity
+   -  Attribute type: **Property**. 
+   -  Required
+-  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+   -  Attribute type: **GeoProperty**. 
+   -  Optional
+-  `name`: The name of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
+   -  Attribute type: **Property**. 
+   -  Required
+
+
+
+# WindSpeedSensor
+
+A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind speed, it returns one or multiple value.
+
+-  `address`: The mailing address
+   -  Attribute type: **Property**. [address](https://schema.org/address)
+   -  Optional
+-  `alternateName`: An alternative name for this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `areaServed`: The geographic area where a service or offered item is provided
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `category`: Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `measureType`: SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `controlledProperty`: Anything that can be sensed, measured or controlled by. Enum:'conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+-  `controlledAsset`: The asset(s) (building, object, etc.) controlled by the device.
+   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+   -  Optional
+-  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `dateLastValueReported`: A timestamp which denotes the last time when the device successfully reported data to the cloud
+   -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+   -  Optional
+-  `description`: A description of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `identifier`: Unique identifier of the entity
+   -  Attribute type: **Property**. 
+   -  Required
+-  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+   -  Attribute type: **GeoProperty**. 
+   -  Optional
+-  `name`: The name of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `type`: NGSI Entity type. It has to be Device. One of : `Device`.
+   -  Attribute type: **Property**. 
+   -  Required
+
+
+
 # TdsSensor
 
 A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing tds, it returns one or multiple value.

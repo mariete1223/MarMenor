@@ -7,6 +7,7 @@
         "schema": "https://schema.org/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "AtmosphericPressureSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/AtmosphericPressureSensor",
         "Buoy": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/Buoy",
         "ChlorophyllSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ChlorophyllSensor",
         "ConductivitySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ConductivitySensor",
@@ -28,6 +29,8 @@
         "VolumeSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/VolumeSensor",
         "WaterFlowSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterFlowSensor",
         "WaterLevelSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterLevelSensor",
+        "WindDirectionSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WindDirectionSensor",
+        "WindSpeedSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WindSpeedSensor",
         "address": "https://smartdatamodels.org/address",
         "alternateName": {
             "@id": "https://smartdatamodels.org/alternateName",
@@ -413,6 +416,63 @@
                 {
                     "@language": "en",
                     "@value": "SalinitySensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/AtmosphericPressureSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing atmospheric pressure, it returns one or multiple value."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "AtmosphericPressureSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WindDirectionSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind direction, it returns one or multiple value."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "WindDirectionSensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WindSpeedSensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind speed, it returns one or multiple value."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "WindSpeedSensor"
                 }
             ],
             "rdfs:subClassOf": {
