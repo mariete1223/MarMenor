@@ -1192,6 +1192,30 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
        -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `pressure`: Property related to some measurements that are characterized by a certain value that is measured in a pressure unit (bar or pascal)
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `volume`: Property related to some measurements that are characterized by a certain value that is measured in a volume unit (liter or cubic_meter)
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `precipitation`: The amount of water falling in the soil by natural process (e.g. rain).
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
@@ -1217,6 +1241,18 @@ A device that consists of a sensor, has category `Sensor` and is used for the pu
        -  `measurementPlace`: A string representing the specific location where the measurement was taken
            -  Attribute type: **Property**. [Text](https://schema.org/Text)
 -  `atmosphericPressure`: It defines the observed air (atmospheric or barometric) pressure
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `providedBy`: The device that sent this reading
+           -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+       -  `unitCode`: A string representing the measurement unit corresponding to the Property value. It shall be encoded using the UN/CEFACT Common Codes for Units of Measurement
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+-  `conductivity`: An individual representing the property conductitivity
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
    -  Meta Data: 

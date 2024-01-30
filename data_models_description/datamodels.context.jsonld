@@ -136,6 +136,10 @@
             "@id": "https://smartdatamodels.org/precipitation",
             "@type": "xsd:number"
         },
+        "pressure": {
+            "@id": "https://smartdatamodels.org/pressure",
+            "@type": "xsd:number"
+        },
         "previousSection": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/previousSection",
             "@type": "@id"
@@ -175,6 +179,10 @@
         "turbidityValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/turbidityValues",
             "@type": "xsd:array"
+        },
+        "volume": {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/volume",
+            "@type": "xsd:number"
         },
         "waterFlowValues": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterFlowValues",

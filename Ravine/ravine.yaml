@@ -302,12 +302,18 @@ Ravine:
         type: Property
     temperature:
       $ref: ./genericProperties.yaml#/temperature
+    pressure:
+      $ref: ./genericProperties.yaml#/pressure
+    volume:
+      $ref: ./genericProperties.yaml#/volume
     precipitation:
       $ref: ./genericProperties.yaml#/precipitation
     windDirection:
       $ref: ./genericProperties.yaml#/windDirection
     atmosphericPressure:
       $ref: ./genericProperties.yaml#/atmosphericPressure
+    conductivity:
+      $ref: ./genericProperties.yaml#/conductivity
     windSpeed:
       $ref: ./genericProperties.yaml#/windSpeed
     waterFlowValues:
