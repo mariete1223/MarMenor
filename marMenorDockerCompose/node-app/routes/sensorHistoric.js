@@ -5,8 +5,17 @@ const sensorHistoric = require("../controllers/sensorHistoric");
 
 
 
-router.route("/")
-    .get(catchAsync(sensorHistoric.getNumberRequests))
+router.route("/debug")
+    .get(catchAsync(sensorHistoric.debug))
+
+router.route("/enable")
+    .get(catchAsync(sensorHistoric.enableUpdate))
+
+router.route("/disable")
+    .get(catchAsync(sensorHistoric.unableUpdate))
+
+router.route("/uploadFile/:idEntity")
+    .post(catchAsync(sensorHistoric.uploadFile))
 
 router.route("/:idSensor")
     .get(catchAsync(sensorHistoric.getSensorHistoric))
@@ -14,7 +23,5 @@ router.route("/:idSensor")
 
 router.route("/entity/:idEntity")
     .get(catchAsync(sensorHistoric.getEntityistoric))
-
-
 
 module.exports = router;

@@ -8,6 +8,7 @@ const sensorHistoricRoutes = require("./routes/sensorHistoric")
 const mongoSanitize = require('express-mongo-sanitize');
 const mongoUri = process.env.MONGO_URI;
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 mongoose.connect(mongoUri, {
     useNewUrlParser: true,
@@ -28,6 +29,9 @@ app.use(methodOverride("_method"))
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, "public")))
 app.use(mongoSanitize());
+app.use(cors());
+
+
 
 //Exported routes
 
