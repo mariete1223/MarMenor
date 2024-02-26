@@ -1,5 +1,5 @@
 Buoy:
-  description: 'A floating beacon placed on a sea where the measures are taken'
+  description: 'A floating beacon placed on a sea or lake to indicate a hazard, mark a channel, or show the location of something'
   properties:
     address:
       description: The mailing address
@@ -59,6 +59,7 @@ Buoy:
         type: Property
         uri-prefix: https://smartdatamodels.org/
     identifier:
+      type : string
       anyOf:
         - description: Identifier format of any NGSI entity
           maxLength: 256
@@ -282,126 +283,7 @@ Buoy:
         description: Unique identifier of the entity
       x-ngsi:
         type: Property
-    temperatureValues:
-      description: 'A list of the temperature values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            $ref: ./genericProperties.yaml#/temperature
-      x-ngsi:
-        type: Property
-    chlorophyllValues:
-      description: 'A list of the chlorophyll values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/chlorophyll
-      x-ngsi:
-        type: Property
-    conductivityValues:
-      description: 'A list of the conductivity values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/conductivity
-      x-ngsi:
-        type: Property
-    organicMatterValues:
-      description: 'A list of the organic matter values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/organicMatter
-      x-ngsi:
-        type: Property
-    oxygenValues:
-      description: 'A list of the oxygen values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/oxygen
-      x-ngsi:
-        type: Property
-    pHValues:
-      description: 'A list of the pH values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/pH
-      x-ngsi:
-        type: Property
-    polyethyleneValues:
-      description: 'A list of the polyethylene values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/polyethylene
-      x-ngsi:
-        type: Property
-    salinityValues:
-      description: 'A list of the salinity values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/salininty
-      x-ngsi:
-        type: Property
-    transparencyValues:
-      description: 'A list of the transparency values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/transparency
-      x-ngsi:
-        type: Property
-    turbidityValues:
-      description: 'A list of the turbidity values measured by this Buoy'
-      type: array
-      items:
-        type: object
-        properties:
-          depth:
-            $ref: ./genericProperties.yaml#/depth
-          value: 
-            ref: ./genericProperties.yaml#/turbitity
-      x-ngsi:
-        type: Property
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/
   required:
     - identifier
     - type

@@ -7,98 +7,157 @@
         "schema": "https://schema.org/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "AtmosphericPressureSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/AtmosphericPressureSensor",
         "Buoy": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/Buoy",
-        "ChlorophyllSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ChlorophyllSensor",
-        "ConductivitySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ConductivitySensor",
-        "HumiditySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/HumiditySensor",
-        "OrganicMatterSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/OrganicMatterSensor",
-        "OxygenSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/OxygenSensor",
-        "PhSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PhSensor",
-        "PiezometricLevelSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PiezometricLevelSensor",
+        "Device": "https://github.com/smart-data-models/dataModel.Device/blob/master/Device",
+        "DeviceMeasurement": "https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement",
+        "PiezometricNet": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricNet/piezometricNet.yaml#/PiezometricNet",
         "PiezometricPoint": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/PiezometricPoint",
-        "PolyethyleneSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PolyethyleneSensor",
-        "PrecipitationSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PrecipitationSensor",
-        "PressureSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PressureSensor",
         "Ravine": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/Ravine",
-        "SalinitySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/SalinitySensor",
-        "TdsSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TdsSensor",
-        "TemperatureSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TemperatureSensor",
-        "TransparencySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TransparencySensor",
-        "TurbiditySensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TurbiditySensor",
-        "VolumeSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/VolumeSensor",
-        "WaterFlowSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterFlowSensor",
-        "WaterLevelSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterLevelSensor",
-        "WindDirectionSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WindDirectionSensor",
-        "WindSpeedSensor": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WindSpeedSensor",
+        "WaterNetwork": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/WaterNetwork",
         "address": "https://smartdatamodels.org/address",
         "alternateName": {
-            "@id": "https://smartdatamodels.org/alternateName",
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/alternateName",
             "@type": "xsd:string"
         },
         "areaServed": {
-            "@id": "https://smartdatamodels.org/areaServed",
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/areaServed",
             "@type": "xsd:string"
         },
-        "atmosphericPressure": {
-            "@id": "https://smartdatamodels.org/atmosphericPressure",
-            "@type": "xsd:number"
+        "batteryLevel": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/batteryLevel",
+            "@type": "xsd:undefined"
         },
         "category": {
-            "@id": "https://smartdatamodels.org/category",
-            "@type": "xsd:array"
-        },
-        "chlorophyllValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/chlorophyllValues",
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/category",
             "@type": "xsd:array"
         },
         "closeMeasurements": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/closeMeasurements",
             "@type": "xsd:array"
         },
-        "conductivity": {
-            "@id": "https://smartdatamodels.org/conductivity",
-            "@type": "xsd:number"
-        },
-        "conductivityValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/conductivityValues",
+        "configuration": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/configuration",
             "@type": "xsd:array"
         },
         "controlledAsset": {
-            "@id": "https://smartdatamodels.org/controlledAsset",
-            "@type": "@id"
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/controlledAsset",
+            "@type": "xsd:array"
         },
         "controlledProperty": {
             "@id": "https://smartdatamodels.org/controlledProperty",
-            "@type": "xsd:array"
+            "@type": "xsd:string"
         },
         "dataProvider": {
-            "@id": "https://smartdatamodels.org/dataProvider",
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/dataProvider",
             "@type": "xsd:string"
+        },
+        "dateCreated": {
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/dateCreated",
+            "@type": "xs:dateTime"
+        },
+        "dateFirstUsed": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/dateFirstUsed",
+            "@type": "xs:dateTime"
+        },
+        "dateInstalled": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/dateInstalled",
+            "@type": "xs:dateTime"
+        },
+        "dateLastCalibration": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/dateLastCalibration",
+            "@type": "xs:dateTime"
         },
         "dateLastValueReported": {
             "@id": "https://smartdatamodels.org/dateLastValueReported",
             "@type": "xs:dateTime"
         },
+        "dateManufactured": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/dateManufactured",
+            "@type": "xs:dateTime"
+        },
+        "dateModified": {
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/dateModified",
+            "@type": "xs:dateTime"
+        },
+        "dateObserved": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/dateObserved",
+            "@type": "xs:dateTime"
+        },
+        "depth": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/depth",
+            "@type": "xsd:number"
+        },
         "description": {
             "@id": "https://smartdatamodels.org/description",
             "@type": "xsd:string"
         },
-        "humidity": {
-            "@id": "https://smartdatamodels.org/humidity",
+        "deviceCategory": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/deviceCategory",
+            "@type": "xsd:array"
+        },
+        "deviceState": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/deviceState",
+            "@type": "xsd:string"
+        },
+        "deviceType": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/deviceType",
+            "@type": "xsd:string"
+        },
+        "direction": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/direction",
+            "@type": "xsd:string"
+        },
+        "distance": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/distance",
             "@type": "xsd:number"
+        },
+        "dstAware": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/dstAware",
+            "@type": "xsd:boolean"
+        },
+        "firmwareVersion": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/firmwareVersion",
+            "@type": "xsd:string"
+        },
+        "hardwareVersion": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/hardwareVersion",
+            "@type": "xsd:string"
+        },
+        "hasSubNetwork": {
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/hasSubNetwork",
+            "@type": "@id"
         },
         "identifier": {
             "@id": "https://smartdatamodels.org/identifier",
             "@type": "xsd:undefined"
         },
+        "ipAddress": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/ipAddress",
+            "@type": "xsd:array"
+        },
+        "isComposedOf": {
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/isComposedOf",
+            "@type": "@id"
+        },
         "location": {
             "@id": "ngsi-ld:location",
             "@type": "xsd:undefined"
         },
-        "measureType": {
-            "@id": "https://smartdatamodels.org/measureType",
-            "@type": "xsd:array"
+        "macAddress": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/macAddress",
+            "@type": "xsd:string"
+        },
+        "mcc": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/mcc",
+            "@type": "xsd:string"
+        },
+        "measurementType": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/measurementType",
+            "@type": "xsd:string"
+        },
+        "mnc": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/mnc",
+            "@type": "xsd:string"
         },
         "name": {
             "@id": "https://smartdatamodels.org/name",
@@ -108,113 +167,101 @@
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/nextSection",
             "@type": "@id"
         },
+        "numValue": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/numValue",
+            "@type": "xsd:number"
+        },
         "numberInNetwork": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/numberInNetwork",
             "@type": "xsd:number"
         },
-        "organicMatterValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/organicMatterValues",
+        "osVersion": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/osVersion",
+            "@type": "xsd:string"
+        },
+        "outlier": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/outlier",
+            "@type": "xsd:boolean"
+        },
+        "owner": {
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/owner",
             "@type": "xsd:array"
-        },
-        "oxygenValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/oxygenValues",
-            "@type": "xsd:array"
-        },
-        "pHValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/pHValues",
-            "@type": "xsd:array"
-        },
-        "piezometricLevel": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/piezometricLevel",
-            "@type": "xsd:number"
-        },
-        "polyethyleneValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/polyethyleneValues",
-            "@type": "xsd:array"
-        },
-        "precipitation": {
-            "@id": "https://smartdatamodels.org/precipitation",
-            "@type": "xsd:number"
-        },
-        "pressure": {
-            "@id": "https://smartdatamodels.org/pressure",
-            "@type": "xsd:number"
         },
         "previousSection": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/previousSection",
             "@type": "@id"
         },
-        "salinity": {
-            "@id": "https://smartdatamodels.org/salinity",
-            "@type": "xsd:number"
+        "provider": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/provider",
+            "@type": "xsd:string"
         },
-        "salinityValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/salinityValues",
-            "@type": "xsd:array"
+        "refDevice": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/refDevice",
+            "@type": "@id"
+        },
+        "refDeviceModel": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/refDeviceModel",
+            "@type": "@id"
+        },
+        "relativePosition": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/relativePosition",
+            "@type": "xsd:string"
+        },
+        "rssi": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/rssi",
+            "@type": "xsd:number"
         },
         "section": {
             "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/section",
             "@type": "xsd:number"
         },
+        "seeAlso": {
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/seeAlso",
+            "@type": "xsd:undefined"
+        },
+        "serialNumber": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/serialNumber",
+            "@type": "xsd:string"
+        },
+        "softwareVersion": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/softwareVersion",
+            "@type": "xsd:string"
+        },
         "source": {
             "@id": "https://smartdatamodels.org/source",
             "@type": "xsd:string"
         },
-        "tds": {
-            "@id": "https://smartdatamodels.org/tds",
-            "@type": "xsd:number"
-        },
-        "temperature": {
-            "@id": "https://smartdatamodels.org/temperature",
-            "@type": "xsd:number"
-        },
-        "temperatureValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/temperatureValues",
+        "supportedProtocol": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/supportedProtocol",
             "@type": "xsd:array"
         },
-        "transparencyValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/transparencyValues",
-            "@type": "xsd:array"
+        "textValue": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/textValue",
+            "@type": "xsd:string"
         },
-        "turbidityValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/turbidityValues",
-            "@type": "xsd:array"
+        "unit": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/unit",
+            "@type": "xsd:string"
         },
-        "volume": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Generic-properties/genericProperties.yaml#/volume",
-            "@type": "xsd:number"
-        },
-        "waterFlowValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterFlowValues",
-            "@type": "xsd:array"
-        },
-        "waterLevelValues": {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/waterLevelValues",
-            "@type": "xsd:array"
-        },
-        "windDirection": {
-            "@id": "https://smartdatamodels.org/windDirection",
-            "@type": "xsd:number"
-        },
-        "windSpeed": {
-            "@id": "https://smartdatamodels.org/windSpeed",
-            "@type": "xsd:number"
+        "value": {
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/value",
+            "@type": "xsd:string"
         }
     },
     "@graph": [
         {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TemperatureSensor",
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/Device",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing temperature, it returns one or multiple value."
+                    "@value": ""
                 }
             ],
             "rdfs:label": [
                 {
                     "@language": "en",
-                    "@value": "TemperatureSensor"
+                    "@value": "Device"
                 }
             ],
             "rdfs:subClassOf": {
@@ -222,18 +269,18 @@
             }
         },
         {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ConductivitySensor",
+            "@id": "https://github.com/smart-data-models/dataModel.Device/blob/master/DeviceMeasurement",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing conductivity, it returns one or multiple value."
+                    "@value": ""
                 }
             ],
             "rdfs:label": [
                 {
                     "@language": "en",
-                    "@value": "ConductivitySensor"
+                    "@value": "DeviceMeasurement"
                 }
             ],
             "rdfs:subClassOf": {
@@ -241,18 +288,18 @@
             }
         },
         {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/ChlorophyllSensor",
+            "@id": "https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/WaterNetwork",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing chlorophyll, it returns one or multiple value."
+                    "@value": ""
                 }
             ],
             "rdfs:label": [
                 {
                     "@language": "en",
-                    "@value": "ChlorophyllSensor"
+                    "@value": "WaterNetwork"
                 }
             ],
             "rdfs:subClassOf": {
@@ -260,341 +307,18 @@
             }
         },
         {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/HumiditySensor",
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricNet/piezometricNet.yaml#/PiezometricNet",
             "@type": "rdfs:Class",
             "rdfs:comment": [
                 {
                     "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing humidity, it returns one or multiple value."
+                    "@value": ""
                 }
             ],
             "rdfs:label": [
                 {
                     "@language": "en",
-                    "@value": "HumiditySensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/OrganicMatterSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing organicMatter, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "OrganicMatterSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/OxygenSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing oxygen, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "OxygenSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PhSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pH, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "PhSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PiezometricLevelSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing piezometricLevel, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "PiezometricLevelSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PolyethyleneSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing polyethylene, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "PolyethyleneSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PrecipitationSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing precipitation, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "PrecipitationSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/PressureSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pressure, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "PressureSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/SalinitySensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing salinity, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "SalinitySensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/AtmosphericPressureSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing atmospheric pressure, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "AtmosphericPressureSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WindDirectionSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind direction, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "WindDirectionSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WindSpeedSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind speed, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "WindSpeedSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TdsSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing tds, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "TdsSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TransparencySensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing transparency, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "TransparencySensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/TurbiditySensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing turbidity, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "TurbiditySensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/VolumeSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing volume, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "VolumeSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterFlowSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing waterFlow, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "WaterFlowSensor"
-                }
-            ],
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            }
-        },
-        {
-            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/WaterLevelSensor",
-            "@type": "rdfs:Class",
-            "rdfs:comment": [
-                {
-                    "@language": "en",
-                    "@value": "A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing waterLevel, it returns one or multiple value."
-                }
-            ],
-            "rdfs:label": [
-                {
-                    "@language": "en",
-                    "@value": "WaterLevelSensor"
+                    "@value": "PiezometricNet"
                 }
             ],
             "rdfs:subClassOf": {
@@ -657,6 +381,22 @@
             "rdfs:subClassOf": {
                 "@id": "schema:Thing"
             }
+        },
+        {
+            "@id": "https://smartdatamodels.org/controlledProperty",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Anything that can be sensed, measured or controlled by."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "controlledProperty"
+                }
+            ]
         }
     ]
 }

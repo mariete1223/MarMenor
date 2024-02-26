@@ -1,5 +1,5 @@
-SensorDevice:
-  description: 'An apparatus (hardware + software + firmware) intended to accomplish a particular task (sensing the environment, actuating, etc.).'
+PiezometricNet:
+  description: 'It represent an area where piezometrics points are located around a point of interest'
   properties:
     address:
       description: The mailing address
@@ -16,6 +16,13 @@ SensorDevice:
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
+            type: Property
+            uri-prefix: https://smartdatamodels.org/
+        postalCode:
+          description: 'The postal code. For example, 24004'
+          type: string
+          x-ngsi:
+            model: https://schema.org/https://schema.org/postalCode
             type: Property
             uri-prefix: https://smartdatamodels.org/
         addressRegion:
@@ -36,101 +43,6 @@ SensorDevice:
         model: https://schema.org/address
         type: Property
         uri: https://smartdatamodels.org/address
-        uri-prefix: https://smartdatamodels.org/
-    alternateName:
-      description: An alternative name for this item
-      type: string
-      x-ngsi:
-        type: Property
-        uri-prefix: https://smartdatamodels.org/
-    areaServed:
-      description: The geographic area where a service or offered item is provided
-      type: string
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-        uri-prefix: https://smartdatamodels.org/
-    category:
-      description: "Sensor: A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. https://w3id.org/saref#Sensor. actuator : A device responsible for moving or controlling a mechanism or system. https://w3id.org/saref#Actuator. Meter : A device built to accurately detect and display a quantity in a form readable by a human being. Partially defined by SAREF. HVAC : Heating, Ventilation and Air Conditioning (HVAC) device that provides indoor environmental comfort. https://w3id.org/saref#HVAC. Network : A device used to connect other devices in a network, such as hub, switch or router in a LAN or Sensor network. (https://w3id.org/saref#Network. Multimedia : A device designed to display, store, record or play multimedia content such as audio, images, animation, video. Enum:'actuator, beacon, endgun, HVAC, implement, irrSection, irrSystem, meter, multimedia, network, sensor'. Raw category will be deprecated use deviceCategory instead to avoid conflict with other aqttributes named category"
-      items:
-        enum:
-          - actuator
-          - beacon
-          - endgun
-          - HVAC
-          - implement
-          - irrSection
-          - irrSystem
-          - meter
-          - multimedia
-          - network
-          - sensor
-        type: string
-      type: array
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-        uri-prefix: https://smartdatamodels.org/
-    measureType:
-      description: "SingleValue: The sensor provides a single output. MultiplValue: The sensor provides multiple outputs. Enum:''singleValue, multipleValue''"
-      items:
-        enum:
-          - singleValue
-          - multipleValue
-        type: string
-      type: array
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-        uri-prefix: https://smartdatamodels.org/
-    controlledProperty:
-      description: 'Anything that can be sensed, measured or controlled by. Enum:''conductivity, chlorophyll, humidity, organicMatter, oxygen, pH, piezometricLevel, polyethylene, precipitation, pressure, salinity, tds, temperature, transparency, turbidity, volume, waterFlow, waterLevel'''
-      items:
-        enum:
-          - conductivity
-          - chlorophyll
-          - humidity
-          - organicMatter
-          - oxygen
-          - pH
-          - piezometricLevel
-          - polyethylene
-          - precipitation
-          - pressure
-          - salinity
-          - tds
-          - temperature
-          - transparency
-          - turbidity
-          - volume
-          - waterFlow
-          - waterLevel
-        type: string
-      type: array
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-        uri-prefix: https://smartdatamodels.org/
-    controlledAsset: 
-      description: "The asset(s) (building, object, etc.) controlled by the device."
-      type: string
-      x-ngsi: 
-        model: "https://schema.org/URL"
-        type: Relationship
-        uri-prefix: https://smartdatamodels.org/
-    dataProvider:
-      description: A sequence of characters identifying the provider of the harmonised data entity
-      type: string
-      x-ngsi:
-        type: Property
-        uri-prefix: https://smartdatamodels.org/
-    dateLastValueReported:
-      description: A timestamp which denotes the last time when the device successfully reported data to the cloud
-      format: date-time
-      type: string
-      x-ngsi:
-        model: https://schema.org/DateTime
-        type: Property
         uri-prefix: https://smartdatamodels.org/
     description:
       description: A description of this item
@@ -335,9 +247,15 @@ SensorDevice:
         type: Property
         uri-prefix: https://smartdatamodels.org/
     type:
-      description: NGSI Entity type. It has to be Device
+      description: NGSI Entity type. It has to be PiezometricNet
       enum:
-        - Device
+        - PiezometricNet
+      type: string
+      x-ngsi:
+        type: Property
+        uri-prefix: https://smartdatamodels.org/
+    controlledProperty:
+      description: 'The controlled property of the piezometric net'
       type: string
       x-ngsi:
         type: Property
@@ -345,12 +263,8 @@ SensorDevice:
   required:
     - identifier
     - type
-    - controlledProperty
-    - measureType
   type: object
   x-derived-from: ""
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
-  x-license-url: https://github.com/smart-data-models/dataModel.Device/blob/master/Device/LICENSE.md
-  x-model-schema: https://smart-data-models.github.io/dataModel.Device/Device/schema.json
   x-model-tags: ""
   x-version: 0.0.8

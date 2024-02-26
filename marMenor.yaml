@@ -1,929 +1,106 @@
 components:
   schemas:
-    TemperatureSensor:
+    Device:
       type: object
       allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-      
-      description: >
-       A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing temperature, it returns one or multiple value.
+        - $ref: https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/Device/model.yaml#/Device
 
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            temperatureValues:
-              description: 'A list of the conductivity values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/temperature
-              x-ngsi:
-                type: Property
-          required:
-            - temperatureValues
-        - properties:
-            temperature:
-              $ref: ./genericProperties.yaml#/temperature
-          required:
-            - temperature
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    ConductivitySensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing conductivity, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            conductivityValues:
-              description: 'A list of the conductivity values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/conductivity
-              x-ngsi:
-                type: Property
-          required:
-            - conductivityValues
-        - properties:
-            conductivity:
-              $ref: ./genericProperties.yaml#/conductivity
-          required:
-            - conductivity
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    ChlorophyllSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing chlorophyll, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            chlorophyllValues:
-              description: 'A list of the chlorophyll values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/chlorophyll
-              x-ngsi:
-                type: Property
-          required:
-            - chlorophyllValues
-        - properties:
-            chlorophyll:
-              $ref: ./genericProperties.yaml#/chlorophyll
-          required:
-            - chlorophyll
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    HumiditySensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing humidity, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            humidityValues:
-              description: 'A list of the humidity values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/humidity
-              x-ngsi:
-                type: Property
-          required:
-            - humidityValues
-        - properties:
-            humidity:
-              $ref: ./genericProperties.yaml#/humidity
-          required:
-            - humidity
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    OrganicMatterSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing organicMatter, it returns one or multiple value.
-      
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            organicMatterValues:
-              description: 'A list of the organicMatter values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/organicMatter
-              x-ngsi:
-                type: Property
-          required:
-            - organicMatterValues
-        - properties:
-            organicMatter:
-              $ref: ./genericProperties.yaml#/organicMatter
-          required:
-            - organicMatter
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    OxygenSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing oxygen, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            oxygenValues:
-              description: 'A list of the oxygen values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/oxygen
-              x-ngsi:
-                type: Property
-          required:
-            - oxygenValues
-        - properties:
-            oxygen:
-              $ref: ./genericProperties.yaml#/oxygen
-          required:
-            - oxygen
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    PhSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pH, it returns one or multiple value.
-      
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            pHValues:
-              description: 'A list of the pH values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/pH
-              x-ngsi:
-                type: Property
-          required:
-            - pHValues
-        - properties:
-            pH:
-              $ref: ./genericProperties.yaml#/pH
-          required:
-            - pH
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    PiezometricLevelSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing piezometricLevel, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            piezometricLevelValues:
-              description: 'A list of the piezometricLevel values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/piezometricLevel
-              x-ngsi:
-                type: Property
-          required:
-            - piezometricLevelValues
-        - properties:
-            piezometricLevel:
-              $ref: ./genericProperties.yaml#/piezometricLevel
-          required:
-            - piezometricLevel
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    PolyethyleneSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing polyethylene, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            polyethyleneValues:
-              description: 'A list of the polyethylene values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/polyethylene
-              x-ngsi:
-                type: Property
-          required:
-            - polyethyleneValues
-        - properties:
-            polyethylene:
-              $ref: ./genericProperties.yaml#/polyethylene
-          required:
-            - polyethylene
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    PrecipitationSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing precipitation, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            precipitationValues:
-              description: 'A list of the precipitation values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/precipitation
-              x-ngsi:
-                type: Property
-          required:
-            - precipitationValues
-        - properties:
-            precipitation:
-              $ref: ./genericProperties.yaml#/precipitation
-          required:
-            - precipitation
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    PressureSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing pressure, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            pressureValues:
-              description: 'A list of the pressure values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/pressure
-              x-ngsi:
-                type: Property
-          required:
-            - pressureValues
-        - properties:
-            pressure:
-              $ref: ./genericProperties.yaml#/pressure
-          required:
-            - pressure
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    SalinitySensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing salinity, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            salinityValues:
-              description: 'A list of the salinity values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/salinity
-              x-ngsi:
-                type: Property
-          required:
-            - salinityValues
-        - properties:
-            salinity:
-              $ref: ./genericProperties.yaml#/salinity
-          required:
-            - salinity
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-
-    AtmosphericPressureSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing atmospheric pressure, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            atmosphericPressureValues:
-              description: 'A list of the salinity values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/atmosphericPressure
-              x-ngsi:
-                type: Property
-          required:
-            - atmosphericPressureValues
-        - properties:
-            atmosphericPressure:
-              $ref: ./genericProperties.yaml#/atmosphericPressure
-          required:
-            - atmosphericPressure
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    WindDirectionSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind direction, it returns one or multiple value.
+      properties:
+        controlledProperty:
+          description: 'Anything that can be sensed, measured or controlled by.'
+          items:
+            enum:
+              - airPollution
+              - atmosphericPressure
+              - averageVelocity
+              - batteryLife
+              - batterySupply
+              - cdom
+              - conductance
+              - conductivity
+              - chlorophyll
+              - depth
+              - eatingActivity
+              - electricityConsumption
+              - energy
+              - fillingLevel
+              - flow
+              - freeChlorine
+              - gasConsumption
+              - gateOpening
+              - heading
+              - humidity
+              - light
+              - location
+              - milking
+              - motion
+              - movementActivity
+              - noiseLevel
+              - occupancy
+              - organicMatter
+              - orp
+              - oxygen
+              - pH
+              - piezometricLevel
+              - polyethylene
+              - power
+              - precipitation
+              - pressure
+              - refractiveIndex
+              - salinity
+              - smoke
+              - soilMoisture
+              - solarRadiation
+              - speed
+              - tds
+              - temperature
+              - trafficFlow
+              - transparency
+              - tss
+              - turbidity
+              - uvLampIntensity
+              - uvOrganicLoad
+              - volume
+              - waterConsumption
+              - waterLevel
+              - waterPollution
+              - weatherConditions
+              - weight
+              - windDirection
+              - windSpeed
+            type: string
+          type: array
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
+            uri-prefix: https://smartdatamodels.org/
     
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-            windDirectionValues:
-              description: 'A list of the wind direction values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  value: 
-                    $ref: ./genericProperties.yaml#/windDirection
-              x-ngsi:
-                type: Property
-          required:
-            - windDirectionValues
-        - properties:
-            windDirection:
-              $ref: ./genericProperties.yaml#/windDirection
-          required:
-            - windDirection
       x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-        
-    WindSpeedSensor:
+        uri-prefix: https://github.com/smart-data-models/dataModel.Device/blob/master/
+  
+    DeviceMeasurement:
       type: object
       allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
+        - $ref: https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/DeviceMeasurement/model.yaml#/DeviceMeasurement
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing wind speed, it returns one or multiple value.
+      x-ngsi:
+        uri-prefix: https://github.com/smart-data-models/dataModel.Device/blob/master/
     
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-            windSpeedValues:
-              description: 'A list of the wind speed values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  value: 
-                    $ref: ./genericProperties.yaml#/windSpeed
-              x-ngsi:
-                type: Property
-          required:
-            - windSpeedValues
-        - properties:
-            windSpeed:
-              $ref: ./genericProperties.yaml#/windSpeed
-          required:
-            - windSpeed
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-
-    TdsSensor:
+    WaterNetwork:
       type: object
       allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
+        - $ref: https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetwork/model.yaml#/WaterNetwork
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing tds, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            tdsValues:
-              description: 'A list of the tds values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/tds
-              x-ngsi:
-                type: Property
-          required:
-            - tdsValues
-        - properties:
-            tds:
-              $ref: ./genericProperties.yaml#/tds
-          required:
-            - tds
       x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    TransparencySensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing transparency, it returns one or multiple value.
+        uri-prefix: https://github.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/blob/master/
     
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            transparencyValues:
-              description: 'A list of the transparency values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/transparency
-              x-ngsi:
-                type: Property
-          required:
-            - transparencyValues
-        - properties:
-            transparency:
-              $ref: ./genericProperties.yaml#/transparency
-          required:
-            - transparency
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    TurbiditySensor:
+    PiezometricNet:
       type: object
       allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing turbidity, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            turbidityValues:
-              description: 'A list of the turbidity values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/turbidity
-              x-ngsi:
-                type: Property
-          required:
-            - turbidityValues
-        - properties:
-            turbidity:
-              $ref: ./genericProperties.yaml#/turbidity
-          required:
-            - turbidity
+        - $ref: ./piezometricNet.yaml#/PiezometricNet
       x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    VolumeSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricNet/piezometricNet.yaml#/
 
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing volume, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            volumeValues:
-              description: 'A list of the volume values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/volume
-              x-ngsi:
-                type: Property
-          required:
-            - volumeValues
-        - properties:
-            volume:
-              $ref: ./genericProperties.yaml#/volume
-          required:
-            - volume
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    WaterFlowSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: >  
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing waterFlow, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            flowValues:
-              description: 'A list of the waterFlow values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/flow
-              x-ngsi:
-                type: Property
-          required:
-            - flowValues
-        - properties:
-            flow:
-              $ref: ./genericProperties.yaml#/flow
-          required:
-            - flow
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-    WaterLevelSensor:
-      type: object
-      allOf:
-        - $ref: ./sensorDevice.yaml#/SensorDevice
-
-      description: >
-        A device that consists of a sensor, has category `Sensor` and is used for the purpose of sensing waterLevel, it returns one or multiple value.
-
-      oneOf:
-        - properties:
-            providedBy:
-              description: "The device that sent this reading\n"
-              format: URL
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/URL"
-                type: Relationship
-            observedAt:
-              description: "A timestamp which denotes when the reading was taken\n"
-              format: date-time
-              type: string
-              x-ngsi: 
-                model: "https://schema.org/DateTime"
-                type: Property
-            waterLevelValues:
-              description: 'A list of the waterLevel values measured by this Sensor'
-              type: array
-              items:
-                type: object
-                properties:
-                  depth:
-                    $ref: ./genericProperties.yaml#/depth
-                  value: 
-                    $ref: ./genericProperties.yaml#/waterLevel
-              x-ngsi:
-                type: Property
-                uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-          required:
-            - waterLevelValues
-        - properties:
-            waterLevel:
-              $ref: ./genericProperties.yaml#/waterLevel
-              x-ngsi:
-                type: Property
-                uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
-          required:
-            - waterLevel
-      x-ngsi:
-        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/marMenor.yaml#/
     Buoy:
       type: object
       allOf:

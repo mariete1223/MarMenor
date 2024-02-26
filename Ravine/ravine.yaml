@@ -300,44 +300,7 @@ Ravine:
         description: Unique identifier of the entity
       x-ngsi:
         type: Property
-    temperature:
-      $ref: ./genericProperties.yaml#/temperature
-    pressure:
-      $ref: ./genericProperties.yaml#/pressure
-    volume:
-      $ref: ./genericProperties.yaml#/volume
-    precipitation:
-      $ref: ./genericProperties.yaml#/precipitation
-    windDirection:
-      $ref: ./genericProperties.yaml#/windDirection
-    atmosphericPressure:
-      $ref: ./genericProperties.yaml#/atmosphericPressure
-    conductivity:
-      $ref: ./genericProperties.yaml#/conductivity
-    windSpeed:
-      $ref: ./genericProperties.yaml#/windSpeed
-    waterFlowValues:
-      description: 'A list of the water flow values measured by this Boya'
-      type: array
-      items:
-        type: object
-        properties:
-          value: 
-            ref: ./genericProperties.yaml#/flow
-      x-ngsi:
-        type: Property
-    waterLevelValues:
-      description: 'A list of the water level values measured by this Boya'
-      type: array
-      items:
-        type: object
-        properties:
-          value: 
-            ref: ./genericProperties.yaml#/waterLevel
-      x-ngsi:
-        type: Property
-    humidity:
-      $ref: ./genericProperties.yaml#/humidity
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/
   required:
     - identifier
     - type

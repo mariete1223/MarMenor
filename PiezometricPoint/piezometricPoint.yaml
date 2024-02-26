@@ -287,16 +287,7 @@ PiezometricPoint:
         description: Unique identifier of the entity
       x-ngsi:
           type: Property
-    temperature:
-      $ref: ./genericProperties.yaml#/temperature
-    conductivity:
-      $ref: ./genericProperties.yaml#/conductivity
-    piezometricLevel:
-      $ref: ./genericProperties.yaml#/piezometricLevel
-    salinity:
-      $ref: ./genericProperties.yaml#/salinity
-    tds:
-      $ref: ./genericProperties.yaml#/tds
+          uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/
     
   required:
     - identifier
