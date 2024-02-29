@@ -217,12 +217,22 @@
 -  `unit`: Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code
    -  Attribute type: **Property**. 
    -  Optional
+-  `numValue`: Numerical value of the measurement
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+   -  Meta Data: 
+       -  `depth`: Depth where the measurement was taken in meters
+           -  Attribute type: **Property**. [Number](https://schema.org/Number)
+       -  `measurementPlace`: A string representing the specific location where the measurement was taken
+           -  Attribute type: **Property**. [Text](https://schema.org/Text)
+       -  `observedAt`: A timestamp which denotes when the reading was taken
+           -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
 
 
 
 # WaterNetwork
 
-
+Adapted model from WaterNetwork of WaterDistributionManagementEPANET, representing a complex Ravine composed by the aggregation of simple Ravines
 -  `address`: The mailing address
    -  Attribute type: **Property**. [address](https://schema.org/address)
    -  Optional
