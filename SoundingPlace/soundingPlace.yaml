@@ -1,5 +1,5 @@
-PiezometricPoint:
-  description: 'It is a point in a piezometric network where a polling is made'
+SoundingPlace:
+  description: 'Place where a sounding is made to measure the depth of the water and other characteristics'
   properties:
     address:
       description: The mailing address
@@ -255,20 +255,38 @@ PiezometricPoint:
         type: Property
         uri-prefix: https://smartdatamodels.org/
     numberInNetwork:
-      description: 'Number indicating the order of the piezometric point in case it is part of a set of piezometric points, if not it will be 0'
+      description: 'Number indicating the order of the Sounding Place in case it is part of a Piezometric Network, if not it will be 0'
       type: number
       x-ngsi:
         type: Property
     type:
       description: NGSI Entity type. It has to be Rambla
       enum:
-        - PiezometricPoint
+        - SoundingPlace
       type: string
       x-ngsi:
         type: Property
         uri-prefix: https://smartdatamodels.org/
+    isPartOf:
+      description: 'It indicates the Piezometric Network to which the Sounding Place belongs'
+      anyOf:
+        - description: Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
+          format: uri
+          type: string
+          x-ngsi:
+            type: Property
+      x-ngsi:
+        type: Relationship
+        uri-prefix: https://schema.org/
     closeMeasurements:
-      description: 'A list of the devices that take measures close to this PiezometricPoint'
+      description: 'A list of the devices that take measures close to this Sounding Place'
       type: array
       items:
         anyOf:
@@ -287,7 +305,7 @@ PiezometricPoint:
         description: Unique identifier of the entity
       x-ngsi:
           type: Property
-          uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/PiezometricPoint/piezometricPoint.yaml#/
+          uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/SoundingPlace/soundingPlace.yaml#/
     
   required:
     - identifier

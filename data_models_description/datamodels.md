@@ -217,14 +217,16 @@
 -  `unit`: Units of the measurement. In case of use of an acronym use units accepted in [CEFACT](https://www.unece.org/cefact.html) code
    -  Attribute type: **Property**. 
    -  Optional
+-  `depth`: Depth where the measurement was taken in meters
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `target`: A string representing the specific object or place where the measurement was taken
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
 -  `numValue`: Numerical value of the measurement
    -  Attribute type: **Property**. [Number](https://schema.org/Number)
    -  Optional
    -  Meta Data: 
-       -  `depth`: Depth where the measurement was taken in meters
-           -  Attribute type: **Property**. [Number](https://schema.org/Number)
-       -  `measurementPlace`: A string representing the specific location where the measurement was taken
-           -  Attribute type: **Property**. [Text](https://schema.org/Text)
        -  `observedAt`: A timestamp which denotes when the reading was taken
            -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
 
@@ -374,22 +376,25 @@ Adapted model from WaterNetwork of WaterDistributionManagementEPANET, representi
 -  `section`: Number indicating the order of the rambla in case it is part of a set of ramblas, if not it will be 0
    -  Attribute type: **Property**. 
    -  Optional
--  `nextSection`: Entity ID of the next section of the rambla, if it does not exist it will be empty
-   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+-  `nextSection`: A List containing the entities ID of the next Ravines in the WaterNetwork, if there arent it will be empty'
+   -  Attribute type: **Relationship**. 
    -  Optional
--  `previousSection`: Entity ID of the previous section of the rambla, if it does not exist it will be empty
-   -  Attribute type: **Relationship**. [URL](https://schema.org/URL)
+-  `previousSection`: A List containing the entities ID of the previous Ravines in the WaterNetwork, if there arent it will be empty'
+   -  Attribute type: **Relationship**. 
    -  Optional
 -  `type`: NGSI Entity type. It has to be Ravine. One of : `Ravine`.
    -  Attribute type: **Property**. 
    -  Required
+-  `isPartOf`: It indicates the Water Network to which the ravine belongs
+   -  Attribute type: **Relationship**. 
+   -  Optional
 -  `closeMeasurements`: A list of the devices that take measures close to this Rambla
-   -  Attribute type: **Property**. 
+   -  Attribute type: **Relationship**. 
    -  Optional
 
 
 
-# PiezometricPoint
+# SoundingPlace
 
 
 -  `address`: The mailing address
@@ -413,13 +418,16 @@ Adapted model from WaterNetwork of WaterDistributionManagementEPANET, representi
 -  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
    -  Attribute type: **Property**. 
    -  Optional
--  `numberInNetwork`: Number indicating the order of the piezometric point in case it is part of a set of piezometric points, if not it will be 0
+-  `numberInNetwork`: Number indicating the order of the Sounding Place in case it is part of a Piezometric Network, if not it will be 0
    -  Attribute type: **Property**. 
    -  Optional
--  `type`: NGSI Entity type. It has to be Rambla. One of : `PiezometricPoint`.
+-  `type`: NGSI Entity type. It has to be Rambla. One of : `SoundingPlace`.
    -  Attribute type: **Property**. 
    -  Required
--  `closeMeasurements`: A list of the devices that take measures close to this PiezometricPoint
+-  `isPartOf`: It indicates the Piezometric Network to which the Sounding Place belongs
+   -  Attribute type: **Relationship**. 
+   -  Optional
+-  `closeMeasurements`: A list of the devices that take measures close to this Sounding Place
    -  Attribute type: **Property**. 
    -  Optional
 

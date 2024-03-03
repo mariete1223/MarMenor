@@ -259,18 +259,48 @@ Ravine:
       x-ngsi:
         type: Property
     nextSection:
-      description: 'Entity ID of the next section of the rambla, if it does not exist it will be empty'
-      format: URL
-      type: string
-      x-ngsi: 
-        model: "https://schema.org/URL"
+      description: A List containing the entities ID of the next Ravines in the WaterNetwork, if there arent it will be empty'
+      items:
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Property
+        description: Unique identifier of the entity
+        x-ngsi:
+          type: Property
+      type: array
+      x-ngsi:
         type: Relationship
     previousSection:
-      description: 'Entity ID of the previous section of the rambla, if it does not exist it will be empty'
-      format: URL
-      type: string
-      x-ngsi: 
-        model: "https://schema.org/URL"
+      description: A List containing the entities ID of the previous Ravines in the WaterNetwork, if there arent it will be empty'
+      items:
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Property
+        description: Unique identifier of the entity
+        x-ngsi:
+          type: Property
+      type: array
+      x-ngsi:
         type: Relationship
     type:
       description: NGSI Entity type. It has to be Ravine
@@ -280,6 +310,24 @@ Ravine:
       x-ngsi:
         type: Property
         uri-prefix: https://smartdatamodels.org/
+    isPartOf:
+      description: 'It indicates the Water Network to which the ravine belongs'
+      anyOf:
+        - description: Identifier format of any NGSI entity
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
+          format: uri
+          type: string
+          x-ngsi:
+            type: Property
+      x-ngsi:
+        type: Relationship
+        uri-prefix: https://schema.org/
     closeMeasurements:
       description: 'A list of the devices that take measures close to this Rambla'
       type: array
@@ -291,21 +339,21 @@ Ravine:
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
             type: string
             x-ngsi:
-              type: Relationship
+              type: Property
           - description: Identifier format of any NGSI entity
             format: uri
             type: string
             x-ngsi:
-              type: Relationship
+              type: Property
         description: Unique identifier of the entity
       x-ngsi:
-        type: Property
+        type: Relationship
         uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/
   required:
     - identifier
     - type
   type: object
-  x-derived-from: ""
+  x-derived-from: "http://purl.obolibrary.org/obo/ENVO_01000446"
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-model-tags: ""
   x-version: 0.0.8

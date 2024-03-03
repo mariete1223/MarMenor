@@ -288,7 +288,7 @@ Buoy:
     - identifier
     - type
   type: object
-  x-derived-from: ""
+  x-derived-from: "http://purl.obolibrary.org/obo/ENVO_03600085"
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-model-tags: ""
   x-version: 0.0.8
