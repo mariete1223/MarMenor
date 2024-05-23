@@ -1,0 +1,491 @@
+{
+    "@context": {
+        "0": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/SoundingPlace/soundingPlace.yaml#/0",
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/dataModels#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "Buoy": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Buoy/buoy.yaml#/Buoy",
+        "Device": "https://smartdatamodels.org/dataModel.Device/Device",
+        "DeviceMeasurement": "https://smartdatamodels.org/dataModel.DeviceMeasurement/DeviceMeasurement",
+        "PiezometricNet": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/PiezometricNet/piezometricNet.yaml#/PiezometricNet",
+        "Ravine": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Ravine/ravine.yaml#/Ravine",
+        "SoundingPlace": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/SoundingPlace/soundingPlace.yaml#/SoundingPlace",
+        "WaterNetwork": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/WaterNetwork",
+        "address": "https://smartdatamodels.org/address",
+        "addressCountry": {
+            "@id": "https://smartdatamodels.org/addressCountry",
+            "@type": "xsd:string"
+        },
+        "addressLocality": {
+            "@id": "https://smartdatamodels.org/addressLocality",
+            "@type": "xsd:string"
+        },
+        "addressRegion": {
+            "@id": "https://smartdatamodels.org/addressRegion",
+            "@type": "xsd:string"
+        },
+        "alternateName": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/alternateName",
+            "@type": "xsd:string"
+        },
+        "areaServed": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/areaServed",
+            "@type": "xsd:string"
+        },
+        "batteryLevel": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/batteryLevel",
+            "@type": "xsd:undefined"
+        },
+        "category": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/category",
+            "@type": "xsd:array"
+        },
+        "closeMeasurements": {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/SoundingPlace/soundingPlace.yaml#/closeMeasurements",
+            "@type": "xsd:array"
+        },
+        "configuration": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/configuration",
+            "@type": "xsd:array"
+        },
+        "controlledAsset": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/controlledAsset",
+            "@type": "xsd:array"
+        },
+        "controlledProperty": {
+            "@id": "https://smartdatamodels.org/controlledProperty",
+            "@type": "xsd:string"
+        },
+        "dataProvider": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/dataProvider",
+            "@type": "xsd:string"
+        },
+        "dateCreated": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/dateCreated",
+            "@type": "xs:dateTime"
+        },
+        "dateFirstUsed": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/dateFirstUsed",
+            "@type": "xs:dateTime"
+        },
+        "dateInstalled": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/dateInstalled",
+            "@type": "xs:dateTime"
+        },
+        "dateLastCalibration": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/dateLastCalibration",
+            "@type": "xs:dateTime"
+        },
+        "dateLastValueReported": {
+            "@id": "https://smartdatamodels.org/dateLastValueReported",
+            "@type": "xs:dateTime"
+        },
+        "dateManufactured": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/dateManufactured",
+            "@type": "xs:dateTime"
+        },
+        "dateModified": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/dateModified",
+            "@type": "xs:dateTime"
+        },
+        "dateObserved": {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/dateObserved",
+            "@type": "xs:dateTime"
+        },
+        "depth": {
+            "@id": "https://smartdatamodels.org/depth",
+            "@type": "xsd:number"
+        },
+        "description": {
+            "@id": "https://smartdatamodels.org/description",
+            "@type": "xsd:string"
+        },
+        "deviceCategory": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/deviceCategory",
+            "@type": "xsd:array"
+        },
+        "deviceState": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/deviceState",
+            "@type": "xsd:string"
+        },
+        "deviceType": {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/deviceType",
+            "@type": "xsd:string"
+        },
+        "direction": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/direction",
+            "@type": "xsd:string"
+        },
+        "distance": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/distance",
+            "@type": "xsd:number"
+        },
+        "district": {
+            "@id": "https://smartdatamodels.org/district",
+            "@type": "xsd:string"
+        },
+        "dstAware": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/dstAware",
+            "@type": "xsd:boolean"
+        },
+        "firmwareVersion": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/firmwareVersion",
+            "@type": "xsd:string"
+        },
+        "hardwareVersion": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/hardwareVersion",
+            "@type": "xsd:string"
+        },
+        "hasSubNetwork": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/hasSubNetwork",
+            "@type": "@id"
+        },
+        "identifier": {
+            "@id": "https://smartdatamodels.org/identifier",
+            "@type": "xsd:undefined"
+        },
+        "ipAddress": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/ipAddress",
+            "@type": "xsd:array"
+        },
+        "isComposedOf": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/isComposedOf",
+            "@type": "@id"
+        },
+        "isPartOf": {
+            "@id": "schema:isPartOf",
+            "@type": "@id"
+        },
+        "location": {
+            "@id": "ngsi-ld:location",
+            "@type": "xsd:undefined"
+        },
+        "macAddress": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/macAddress",
+            "@type": "xsd:string"
+        },
+        "mcc": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/mcc",
+            "@type": "xsd:string"
+        },
+        "measurementType": {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/measurementType",
+            "@type": "xsd:string"
+        },
+        "mnc": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/mnc",
+            "@type": "xsd:string"
+        },
+        "name": {
+            "@id": "https://smartdatamodels.org/name",
+            "@type": "xsd:string"
+        },
+        "nextSection": {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Ravine/ravine.yaml#/nextSection",
+            "@type": "@id"
+        },
+        "numValue": {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/numValue",
+            "@type": "xsd:number"
+        },
+        "numberInNetwork": {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/SoundingPlace/soundingPlace.yaml#/numberInNetwork",
+            "@type": "xsd:number"
+        },
+        "osVersion": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/osVersion",
+            "@type": "xsd:string"
+        },
+        "outlier": {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/outlier",
+            "@type": "xsd:boolean"
+        },
+        "owner": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/owner",
+            "@type": "xsd:array"
+        },
+        "postOfficeBoxNumber": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/postOfficeBoxNumber",
+            "@type": "xsd:string"
+        },
+        "postalCode": {
+            "@id": "https://smartdatamodels.org/postalCode",
+            "@type": "xsd:string"
+        },
+        "previousSection": {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Ravine/ravine.yaml#/previousSection",
+            "@type": "@id"
+        },
+        "provider": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/provider",
+            "@type": "xsd:string"
+        },
+        "refDevice": {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/refDevice",
+            "@type": "@id"
+        },
+        "refDeviceModel": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/refDeviceModel",
+            "@type": "@id"
+        },
+        "relativePosition": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/relativePosition",
+            "@type": "xsd:string"
+        },
+        "rssi": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/rssi",
+            "@type": "xsd:number"
+        },
+        "section": {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Ravine/ravine.yaml#/section",
+            "@type": "xsd:number"
+        },
+        "seeAlso": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/seeAlso",
+            "@type": "xsd:undefined"
+        },
+        "serialNumber": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/serialNumber",
+            "@type": "xsd:string"
+        },
+        "softwareVersion": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/softwareVersion",
+            "@type": "xsd:string"
+        },
+        "source": {
+            "@id": "https://smartdatamodels.org/source",
+            "@type": "xsd:string"
+        },
+        "streetAddress": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/streetAddress",
+            "@type": "xsd:string"
+        },
+        "streetNr": {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/streetNr",
+            "@type": "xsd:string"
+        },
+        "supportedProtocol": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/supportedProtocol",
+            "@type": "xsd:array"
+        },
+        "target": {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/marMenor.yaml#/target",
+            "@type": "xsd:string"
+        },
+        "textValue": {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/textValue",
+            "@type": "xsd:string"
+        },
+        "unit": {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/unit",
+            "@type": "xsd:string"
+        },
+        "value": {
+            "@id": "https://smartdatamodels.org/dataModel.Device/value",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "https://smartdatamodels.org/dataModel.Device/Device",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Device"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/DeviceMeasurement",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "DeviceMeasurement"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/WaterNetwork",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Adapted model from WaterNetwork of WaterDistributionManagementEPANET, representing a complex Ravine composed by the aggregation of simple Ravines"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "WaterNetwork"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/PiezometricNet/piezometricNet.yaml#/PiezometricNet",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "PiezometricNet"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Buoy/buoy.yaml#/Buoy",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Buoy"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Ravine/ravine.yaml#/Ravine",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Ravine"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/SoundingPlace/soundingPlace.yaml#/SoundingPlace",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "SoundingPlace"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "https://smartdatamodels.org/controlledProperty",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Anything that can be sensed, measured or controlled by."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "controlledProperty"
+                }
+            ]
+        },
+        {
+            "@id": "https://smartdatamodels.org/depth",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Depth where the measurement was taken in meters"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "depth"
+                }
+            ]
+        },
+        {
+            "@id": "https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/marMenor.yaml#/target",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "A string representing the specific object or place where the measurement was taken"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "target"
+                }
+            ]
+        },
+        {
+            "@id": "https://smartdatamodels.org/dataModel.DeviceMeasurement/numValue",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Numerical value of the measurement"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "numValue"
+                }
+            ]
+        }
+    ]
+}

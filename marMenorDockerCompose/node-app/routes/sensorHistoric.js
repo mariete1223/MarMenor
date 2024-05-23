@@ -8,20 +8,23 @@ const sensorHistoric = require("../controllers/sensorHistoric");
 router.route("/debug")
     .get(catchAsync(sensorHistoric.debug))
 
-router.route("/enable")
-    .get(catchAsync(sensorHistoric.enableUpdate))
 
-router.route("/disable")
-    .get(catchAsync(sensorHistoric.unableUpdate))
+router.route("/subscription/Buoy")
+    .post(catchAsync(sensorHistoric.updateBuoy))
 
-router.route("/uploadFile/:idEntity")
-    .post(catchAsync(sensorHistoric.uploadFile))
+router.route("/subscription/Device")
+    .post(catchAsync(sensorHistoric.updateDevice))
 
-router.route("/:idSensor")
-    .get(catchAsync(sensorHistoric.getSensorHistoric))
-    .post(catchAsync(sensorHistoric.uploadSensorHistoric))
+router.route("/subscription/Ravine")
+    .post(catchAsync(sensorHistoric.updateRavine))
 
-router.route("/entity/:idEntity")
-    .get(catchAsync(sensorHistoric.getEntityistoric))
+router.route("/subscription/SoundingPlace")
+    .post(catchAsync(sensorHistoric.updateSoundingPlace))
+
+router.route("/subscription/DeviceMeasurement")
+    .post(catchAsync(sensorHistoric.updateDeviceMeasurement))
+
+router.route("/subscription/DeviceMeasurement/filtered")
+    .post(catchAsync(sensorHistoric.updateDeviceMeasurementFiltered))
 
 module.exports = router;

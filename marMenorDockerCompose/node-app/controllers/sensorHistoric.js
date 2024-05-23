@@ -4,113 +4,38 @@ const axios = require('axios');
 const parse = require('csv-parser');
 const fs = require('fs');
 const path = require('path');
+const $rdf = require('rdflib');
 const mongoose = require("mongoose");
 
 const batchSize = 10000;
 isUpdateEnabled = false;
 const collections = {};
 
+
+const endpointURL = 'http://fuseki:3030/prueba';
+
 lecturas = []
 
+function generateCloseMeasurement(closeMe, prefix) {
+    let closeMeasurements = ""
 
-
-function obtainCollection(collectionName){
-    let Colecction;
-    if(collections[collectionName]){
-        Colecction = collections[collectionName];
-        return Colecction;
-    }
-    else{
-        Colecction = mongoose.model(collectionName, SensorHistoric);
-        collections[collectionName] = Colecction;
-        return Colecction;
-    }
-
-}
-
-function findKeyWithObject(data) {
-    for (const key in data) {
-        if (key == 'controlledAsset' || key == 'measureType') continue;
-        const currentValue = data[key];
-        if (typeof currentValue === 'object') {
-            return key;
-        } 
-    }
-    return null;
-}
-
-async function uploadSensorHistoricSingleValue(sensorId, controlledId, measuredPropertyComplete, measuredProperty, oldPropertyValue, observedAt, unitCode)  {
-
-        if (isUpdateEnabled) {
-            update(controlledId, measuredPropertyComplete, "singleValue", oldPropertyValue, observedAt, unitCode);
+    if (closeMe.length > 0) {
+        closeMeasurements = prefix + `:closeMeasurements [ a ngsi-ld:Property ; ngsi-ld:hasValue [  a ngsi-ld:Relationship ; ngsi-ld:hasObject <${closeMe[0]}> ]`;
+        for (let i = 1; i < closeMe.length; i++) {
+            closeMeasurements += `, [ a ngsi-ld:Relationship ; ngsi-ld:hasObject <${closeMe[i]}> ]`;
         }
-
-        let collectionName = controlledId+"_"+sensorId;
-        const Colecction = obtainCollection(collectionName);    
-
-        const newMeasure = new Colecction({
-            observedAt,
-            value: oldPropertyValue,
-            metadata: {
-                type: measuredProperty,
-                sensorId,
-                controlledId,
-                unitCode
-            }
-        });
-
-        await newMeasure.save();
+        closeMeasurements += " ] ;";
+    }
+    return closeMeasurements;
 }
 
-async function uploadSensorHistoricMultipleValue(sensorId, controlledId, measuredPropertyComplete, measuredProperty, oldPropertyValue)  {
-    
-    if (isUpdateEnabled) {
-        update(controlledId, measuredPropertyComplete, "multipleValue", oldPropertyValue, oldPropertyValueObservedAt);
-    }
-
-    let collectionName = controlledId+"_"+sensorId;
-    const Colecction = obtainCollection(collectionName);
-
-
-    const newMeasure = new Colecction({
-        observedAt,
-        value: oldPropertyValue,
-        metadata: {
-            type: measuredProperty,
-            sensorId,
-            controlledId
-        }
+function getControlledProperties(data) {
+    let controlledString = "";
+    data.value.forEach(controlled => {
+        controlledString += `"${controlled}",`;
     });
-
-    await newMeasure.save();
-    
-}
-
-
-function update(controlledId, measuredPropertyComplete, measureType, oldPropertyValue, oldPropertyValueObservedAt, unitCode){
-    
-    const url = 'http://orion:1026/ngsi-ld/v1/entities/'+controlledId+'/attrs/'+measuredPropertyComplete;
-    const headers = {
-        'Content-Type': 'application/json',
-        'Link': '<https://raw.githubusercontent.com/mariete1223/MarMenor/main/data_models_description/datamodels.context-ngsi.jsonld>; rel="http://www.w3.org/ns/json-ld#context"; type="application/ld+json"',
-    };
-    data = {}
-    if (measureType == 'singleValue') {
-        data = {
-            "value": oldPropertyValue,
-            "observedAt": oldPropertyValueObservedAt,
-            "unitCode": unitCode
-        };
-    } else {
-        data = oldPropertyValue;
-    }
-    axios.patch(url, data, { headers: headers })
-        .then(response => {
-            console.log('Response:', response.data);
-        })
-        .catch(error => {
-            console.error('Error:', error.response ? error.response.data : error.message);
-        });
+    controlledString = controlledString.slice(0, -1);
+    return controlledString;
 }
 
 module.exports.uploadFile = async (req, res, next) => {
@@ -213,123 +138,486 @@ module.exports.debug = async (req, res, next) => {
 
 
 
-module.exports.uploadSensorHistoric = async (req, res, next) => {
+module.exports.updateBuoy = async (req, res, next) => {
 
-    const oldValue = req?.body;
-    const sensorId = req?.params?.idSensor;
-    const controlledId = oldValue?.data[0]?.controlledAsset.object;
-    const measureType = oldValue?.data[0]?.measureType.value;
-    lecturas.push(controlledId);
-    let measuredProperty;
-    let measuredPropertyComplete;
-    let oldPropertyValue;
-    let observedAt;
-    let unitCode;
-    if (measureType == 'singleValue') {
-        measuredProperty = findKeyWithObject(oldValue?.data[0])
-        measuredPropertyComplete = measuredProperty
-        oldPropertyValue = oldValue?.data[0]?.[measuredProperty].value
-        observedAt = oldValue?.data[0]?.[measuredProperty].observedAt
-        unitCode = oldValue?.data[0]?.[measuredProperty].unitCode
+    data = req?.body["data"][0];
 
-        await uploadSensorHistoricSingleValue(sensorId, controlledId, measuredPropertyComplete, measuredProperty, oldPropertyValue, observedAt, unitCode)
-
-    }else{
-        measuredPropertyComplete = findKeyWithObject(oldValue?.data[0])
-        oldPropertyValue = oldValue?.data[0]?.[measuredPropertyComplete].value
-        oldPropertyValueObservedAt = oldPropertyValue.observedAt
-        measuredProperty = measuredPropertyComplete.split("Values")[0]
-
-        await uploadSensorHistoricMultipleValue(sensorId, controlledId, measuredPropertyComplete, measuredProperty, oldPropertyValue)
+    console.log("CloseM")
+    let objects = [];
+    if (data.closeMeasurements) {
+        console.log(data.closeMeasurements)
+        objects = data.closeMeasurements.value.map(measurement => measurement.object);
     }
+    console.log(objects)
+    const sparqlUpdate = `
+        PREFIX : <https://uri.etsi.org/ngsi-ld/default-context/>
+        PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/>
+        PREFIX ns1: <https://smartdatamodels.org/>
+        PREFIX ns2: <https://raw.githubusercontent.com/mariete1223/MarMenor/main/SoundingPlace/soundingPlace.yaml#/>
+        PREFIX ns3: <https://raw.githubusercontent.com/mariete1223/MarMenor/main/SoundingPlace/soundingPlace.yaml#/>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+        DELETE {
+            ?entity ngsi-ld:name ?name ;
+                ns1:address ?address ;
+                ns1:source ?source ;
+                ngsi-ld:description ?description ;
+                ns3:closeMeasurements ?closeMeasurements ;
+                ngsi-ld:location ?location .
+        }
+        INSERT {
+            ?entity a <https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/Buoy> ;
+                ngsi-ld:name [ a ngsi-ld:Property ; ngsi-ld:hasValue "${data["name"]["value"]}" ] ;
+                ns1:address [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue [ ns1:addressCountry "${data["address"]["value"]["addressCountry"]}" ;
+                            ns1:addressLocality "${data["address"]["value"]["addressLocality"]}" ;
+                            ns1:addressRegion "${data["address"]["value"]["addressRegion"]}" ;
+                            ns1:postalCode "${data["address"]["value"]["postalCode"]}" ] ] ;
+                ns1:source [ a ngsi-ld:Property ; ngsi-ld:hasValue "${data["source"]["value"]}" ] ;
+                ngsi-ld:description [ a ngsi-ld:Property ; ngsi-ld:hasValue "${data["description"]["value"]}" ] ;
+                ${generateCloseMeasurement(objects, "ns3")}
+                ngsi-ld:location [ a ngsi-ld:GeoProperty ;
+                ngsi-ld:hasValue [ a :Point ;
+                        ngsi-ld:coordinates "${data["location"]["value"]["coordinates"][0]}"^^xsd:double,
+                            "${data["location"]["value"]["coordinates"][1]}"^^xsd:double ] ] .
+        }
+        WHERE {
+            ?entity a <https://raw.githubusercontent.com/mariete1223/MarMenor/main/Buoy/buoy.yaml#/Buoy> ;
+                    ns1:identifier [ ngsi-ld:hasValue "${data["id"]}" ] .
+            OPTIONAL {
+                ?entity ngsi-ld:name ?name ;
+                            ns1:address ?address ;
+                            ns1:source ?source ;
+                            ngsi-ld:description ?description ;
+                            ns3:closeMeasurements ?closeMeasurements ;
+                            ngsi-ld:location ?location .
+            }
+        }
+    `;
+
+    console.log(sparqlUpdate)
+    const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/sparql-update',
+    },
+    body: sparqlUpdate,
+    };
+
+    fetch(endpointURL, requestOptions)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.error('Error al realizar la solicitud:', error);
+    });
     
     res.status(204).send();
     return;
 }
 
-module.exports.enableUpdate = (req, res, next) => {
-    isUpdateEnabled = true;
-    res.status(204).send();
-}
+module.exports.updateRavine = async (req, res, next) => {
 
-module.exports.unableUpdate = (req, res, next) => {
-    isUpdateEnabled = false;
-    res.status(204).send();
-}
-
-
-module.exports.getSensorHistoric = async (req, res, next) => {
-    const sensorId = req?.params?.idSensor;
-    const limit = Number(req.query.limit);
-    const startDate = req.query.startDate; 
-    const endDate = req.query.endDate;     
-
-    const collectionNames = Object.keys(collections);
-
-    const collectionsWithSensor = collectionNames.filter(cadena => cadena.includes(sensorId));
-
-    if (collectionsWithSensor.length == 0){
-        res.json({});
+    data = req?.body["data"][0];
+    console.log("CloseM")
+    let objects = [];
+    if (data.closeMeasurements) {
+        console.log(data.closeMeasurements)
+        objects = data.closeMeasurements.value.map(measurement => measurement.object);
     }
+    console.log(objects)
+    const sparqlUpdate = `
+        PREFIX : <https://uri.etsi.org/ngsi-ld/default-context/>
+        PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/>
+        PREFIX ns1: <https://smartdatamodels.org/>
+        PREFIX ns2: <https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/>
+        PREFIX ns3: <https://raw.githubusercontent.com/mariete1223/MarMenor/main/SoundingPlace/soundingPlace.yaml#/>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX schema: <https://schema.org/>
 
-    const Collection = collections[collectionsWithSensor[0]];
-
-    let sensorHistoric = null;
-
-    if(startDate && endDate){
-        sensorHistoric = await QueryUtils.getHistoricByDate(Collection, startDate, endDate, null, null);
-    } else if(limit){
-        sensorHistoric = await QueryUtils.getLimitedHistoric(Collection, "$oldValues", limit, null, null);
-    }else{
-        sensorHistoric = await Collection.find({});
-    }
-
-    if (!sensorHistoric){
-        sensorHistoric = {}
-    }
-        
-    res.json(sensorHistoric);
-}
-
-module.exports.getEntityistoric = async (req, res, next) => {
-    const limit = Number(req.query.limit);
-    const startDate = req.query.startDate; 
-    const endDate = req.query.endDate;     
-    const entityId = req?.params?.idEntity;
-
-    const collectionNames = Object.keys(collections);
-
-    const collectionsWithEntity = collectionNames.filter(cadena => cadena.includes(entityId));
-
-    if (collectionsWithEntity.length == 0){
-        res.json({});
-    }
-
-    let finalResult = {};
-    finalResult["controlledId"] = entityId;
-
-    for (const collectionName of collectionsWithEntity){
-
-        const Collection = collections[collectionName];
-        const sensorId = collectionName.split("_")[1];
-
-        let limitedSensorHistoricList = null;
-
-        if(startDate && endDate){
-            limitedSensorHistoricList = await QueryUtils.getHistoricByDate(Collection, startDate, endDate, null, null);
-        }else if(limit){
-            limitedSensorHistoricList = await QueryUtils.getLimitedHistoric(Collection, "$oldValues", limit, null, null);
-        }else{
-            limitedSensorHistoricList = await Collection.find({});
+        DELETE {
+        ?entity ngsi-ld:name ?name ;
+            ns1:address ?address ;
+            ns1:source ?source ;
+            ngsi-ld:description ?description ;
+            ngsi-ld:location ?location ;
+            ns2:nextSection ?nextSection ;
+            ns2:previousSection ?previousSection ;
+            ns2:section ?section ;
+            ns3:closeMeasurements ?closeMeasurements ;
+            schema:isPartOf ?isPartOf .
         }
-
-        if (limitedSensorHistoricList){
-            
-            finalResult[sensorId] = limitedSensorHistoricList;
-        }else{
-            finalResult[sensorId] = {}
+        INSERT {
+        ?entity a ns2:Ravine ;
+            ngsi-ld:name [ a ngsi-ld:Property ;
+                ngsi-ld:hasValue "${data.name.value}" ] ; 
+            ns1:address [ a ngsi-ld:Property ;
+                ngsi-ld:hasValue [ ns1:addressCountry "${data.address.value.addressCountry}" ;
+                        ns1:addressLocality "${data.address.value.addressLocality}" ;
+                        ns1:addressRegion "${data.address.value.addressRegion}" ;
+                        ns1:postalCode "${data.address.value.postalCode}" ] ] ;
+            ns1:source [ a ngsi-ld:Property ;
+                            ngsi-ld:hasValue "${data.source.value}" ] ;
+            ngsi-ld:description [ a ngsi-ld:Property ;
+                            ngsi-ld:hasValue "${data.description.value}" ] ;
+            ngsi-ld:location [ a ngsi-ld:GeoProperty ;
+                ngsi-ld:hasValue [ a :Point ;
+                        ngsi-ld:coordinates "${data.location.value.coordinates[0]}"^^xsd:double,
+                            "${data.location.value.coordinates[1]}"^^xsd:double ] ] ;
+            ns2:nextSection [ a ngsi-ld:Property ;
+                ngsi-ld:hasValue "${data.nextSection.value}" ] ; 
+            ns2:previousSection [ a ngsi-ld:Property ;
+                ngsi-ld:hasValue "${data.previousSection.value}" ] ;
+            ns2:section [ a ngsi-ld:Property ;
+                ngsi-ld:hasValue "${data.section.value}" ] ;
+            ${generateCloseMeasurement(objects, "ns3")}
+            schema:isPartOf [ a ngsi-ld:Relationship ;
+                ngsi-ld:hasObject <${data.isPartOf.object}> ] .
         }
-    }
+        WHERE {
+        ?entity a ns2:Ravine ;
+                ns1:identifier [ ngsi-ld:hasValue "${data.id}" ] .
+        OPTIONAL {
+            ?entity ngsi-ld:name ?name ;
+                        ns1:address ?address ;
+                        ns1:source ?source ;
+                        ngsi-ld:description ?description ;
+                        ngsi-ld:location ?location ;
+                        ns2:nextSection ?nextSection ; 
+                        ns2:previousSection ?previousSection ;
+                        ns2:section ?section ;
+                        schema:isPartOf ?isPartOf ;
+                        ns3:closeMeasurements ?closeMeasurements ;
+        }
+        }`;
 
-    res.json(finalResult);
+    console.log(sparqlUpdate)
+    const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/sparql-update',
+    },
+    body: sparqlUpdate,
+    };
+
+    fetch(endpointURL, requestOptions)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.error('Error al realizar la solicitud:', error);
+    });
+    
+    res.status(204).send();
+    return;
 }
+
+module.exports.updateSoundingPlace = async (req, res, next) => {
+
+    data = req?.body["data"][0];
+    console.log("CloseM")
+    let objects = [];
+    if (data.closeMeasurements) {
+        console.log(data.closeMeasurements)
+        objects = data.closeMeasurements.value.map(measurement => measurement.object);
+    }
+    console.log(objects)
+    const sparqlUpdate = `
+        PREFIX : <https://uri.etsi.org/ngsi-ld/default-context/>
+        PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/>
+        PREFIX ns1: <https://smartdatamodels.org/>
+        PREFIX ns2: <https://raw.githubusercontent.com/mariete1223/MarMenor/main/Ravine/ravine.yaml#/>
+        PREFIX ns3: <https://raw.githubusercontent.com/mariete1223/MarMenor/main/SoundingPlace/soundingPlace.yaml#/>
+        PREFIX ns4: <https://smartdatamodels.org/dataModel.Device/>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX schema: <https://schema.org/> 
+    
+        DELETE {
+            ?entity ngsi-ld:name ?name ;
+                ns1:address ?address ;
+                ns1:source ?source ;
+                ngsi-ld:description ?description ;
+                ngsi-ld:location ?location ;
+                ns4:category ?category ;
+                ns3:numberInNetwork ?numberInNetwork ;
+                schema:isPartOf ?isPartOf ;
+                ns3:closeMeasurements ?closeMeasurements .
+        }
+        INSERT {
+            ?entity a <https://raw.githubusercontent.com/mariete1223/MarMenor/main/SoundingPlace/soundingPlace.yaml#/SoundingPlace> ;
+                ngsi-ld:name [ a ngsi-ld:Property ; ngsi-ld:hasValue "${data.name.value}" ] ;
+                ns1:address [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue [ ns1:addressCountry "${data.address.value.addressCountry}" ;
+                            ns1:addressLocality "${data.address.value.addressLocality}" ;
+                            ns1:addressRegion "${data.address.value.addressRegion}" ;
+                            ns1:postalCode "${data.address.value.postalCode}" ] ] ;
+                ns1:source [ a ngsi-ld:Property ; ngsi-ld:hasValue "${data.source.value}" ] ;
+                ngsi-ld:description [ a ngsi-ld:Property ; ngsi-ld:hasValue "${data.description.value}" ] ;
+                ngsi-ld:location [ a ngsi-ld:GeoProperty ;
+                ngsi-ld:hasValue [ a :Point ;
+                        ngsi-ld:coordinates "${data.location.value.coordinates[0]}"^^xsd:double,
+                            "${data.location.value.coordinates[1]}"^^xsd:double ] ] ;
+                ns3:numberInNetwork [ a ngsi-ld:Property ; ngsi-ld:hasValue "${data.numberInNetwork.value}" ] ; 
+                ns4:category [ a ngsi-ld:Property ; ngsi-ld:hasValue "${data.category.value}" ] ;
+                ${generateCloseMeasurement(objects, "ns3")}
+                schema:isPartOf [ a ngsi-ld:Relationship ; ngsi-ld:hasObject "${data.isPartOf.object}" ] .
+        }
+        WHERE {
+            ?entity a <https://raw.githubusercontent.com/mariete1223/MarMenor/main/SoundingPlace/soundingPlace.yaml#/SoundingPlace> ;
+                    ns1:identifier [ ngsi-ld:hasValue "${data.id}" ] .
+            OPTIONAL {
+                ?entity ngsi-ld:name ?name ;
+                            ns1:address ?address ;
+                            ns1:source ?source ;
+                            ngsi-ld:description ?description ;
+                            ngsi-ld:location ?location ;
+                            ns4:category ?category ;
+                            ns3:numberInNetwork ?numberInNetwork ;
+                            schema:isPartOf ?isPartOf ;
+                            ns3:closeMeasurements ?closeMeasurements ;
+            }
+        }
+    `;
+    
+    console.log(sparqlUpdate)
+    const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/sparql-update',
+    },
+    body: sparqlUpdate,
+    };
+
+    fetch(endpointURL, requestOptions)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.error('Error al realizar la solicitud:', error);
+    });
+    
+    res.status(204).send();
+    return;
+}
+
+
+module.exports.updateDevice = async (req, res, next) => {
+
+    data = req?.body["data"][0];
+ 
+    const sparqlUpdate = `
+            PREFIX : <https://uri.etsi.org/ngsi-ld/default-context/> 
+            PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/> 
+            PREFIX ns1: <https://smartdatamodels.org/dataModel.Device/> 
+            PREFIX ns2: <https://smartdatamodels.org/>
+            PREFIX ns3: <https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/>
+            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+            DELETE {
+                ?entity ns2:address ?address ;
+                    ns2:controlledProperty ?controlledProperty ;
+                    ns1:controlledAsset ?controlledAsset ;
+                    ns1:deviceCategory ?deviceCategory ;
+                    ns3:alternateName ?alternateName ;
+                    ns3:areaServed ?areaServed ;
+                    ns2:dateLastValueReported ?dateLastValueReported ;
+                    ns2:source ?source ;
+                    ngsi-ld:description ?description ;
+                    ngsi-ld:location ?location ;
+                    ngsi-ld:name ?name .
+            }
+            INSERT {
+                ?entity a ns1:Device ;
+                    ns2:address [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue [ ns2:addressCountry "${data.address.value.addressCountry}" ;
+                                ns2:addressLocality "${data.address.value.addressLocality}" ;
+                                ns2:addressRegion "${data.address.value.addressRegion}" ;
+                                ns2:postalCode "${data.address.value.postalCode}" ] ] ;
+                    ns2:controlledProperty [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue ${getControlledProperties(data.controlledProperty)} ] ;
+                    ns1:controlledAsset [ a ngsi-ld:Relationship ;
+                        ngsi-ld:hasObject <${data.controlledAsset.object[0]}> ] ;
+                    ns1:deviceCategory [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue "${data.deviceCategory.value}" ] ;
+                    ns3:alternateName [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue "${data.alternateName.value}" ] ;
+                    ns3:areaServed [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue "${data.areaServed.value}" ] ;
+                    ns2:dateLastValueReported [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue "${data.dateLastValueReported.value}" ] ;
+                    ns2:source [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue "${data.source.value}" ] ;
+                    ngsi-ld:description [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue "${data.description.value}" ] ;
+                    ngsi-ld:location [ a ngsi-ld:GeoProperty ;
+                        ngsi-ld:hasValue [ a :Point ;
+                            ngsi-ld:coordinates "${data.location.value.coordinates[0]}"^^xsd:double,
+                            "${data.location.value.coordinates[1]}"^^xsd:double ] ] ;
+                    ngsi-ld:name [ a ngsi-ld:Property ;
+                        ngsi-ld:hasValue "${data.name.value}" ] .
+            }
+            WHERE {
+                ?entity a ns1:Device ;
+                    ns2:identifier [ ngsi-ld:hasValue "${data.id}" ] .
+                OPTIONAL {
+                    ?entity ns2:address ?address ;
+                        ns2:controlledProperty ?controlledProperty ;
+                        ns1:controlledAsset ?controlledAsset ;
+                        ns1:deviceCategory ?deviceCategory ;
+                        ns3:alternateName ?alternateName ;
+                        ns3:areaServed ?areaServed ;
+                        ns2:dateLastValueReported ?dateLastValueReported ;
+                        ns2:source ?source ;
+                        ngsi-ld:description ?description ;
+                        ngsi-ld:location ?location ;
+                        ngsi-ld:name ?name ;
+                }
+            }
+        `;
+    
+    console.log(sparqlUpdate)
+    const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/sparql-update',
+    },
+    body: sparqlUpdate,
+    };
+
+    fetch(endpointURL, requestOptions)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.error('Error al realizar la solicitud:', error);
+    });
+    
+    res.status(204).send();
+    return;
+}
+
+module.exports.updateDeviceMeasurement = async (req, res, next) => {
+
+    data = req?.body["data"][0];
+ 
+    const sparqlUpdate = `
+        PREFIX : <https://uri.etsi.org/ngsi-ld/default-context/>
+        PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/>
+        PREFIX ns1: <https://smartdatamodels.org/>
+        PREFIX ns2: <https://smartdatamodels.org/dataModel.DeviceMeasurement/>
+        PREFIX ns4: <https://smartdatamodels.org/dataModel.Device/>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX schema: <https://schema.org/> 
+
+        DELETE {
+            ?entity ns1:controlledProperty ?controlledProperty ;
+                    ns2:deviceType ?deviceType ;
+                    ns2:refDevice ?refDevice ;
+                    ns1:depth ?depth ;
+                    ns1:source ?source ;
+                    ngsi-ld:name ?name .
+        }
+        INSERT {
+            ?entity a <https://smartdatamodels.org/dataModel.DeviceMeasurement/DeviceMeasurement> ;
+                ns1:controlledProperty [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue "${data.controlledProperty.value}" ] ;
+                ns2:deviceType [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue "${data.deviceType.value}" ] ;
+                ns2:refDevice [ a ngsi-ld:Relationship ;
+                    ngsi-ld:hasObject <${data.refDevice.object}> ] ;
+                ns1:depth [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue "${data.depth.value}"^^xsd:double ] ;
+                ns1:source [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue "${data.source.value}" ] ;
+                ngsi-ld:name [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue "${data.name.value}" ] .
+        }
+        WHERE {
+            ?entity a <https://smartdatamodels.org/dataModel.DeviceMeasurement/DeviceMeasurement> ;
+                    ns1:identifier [ ngsi-ld:hasValue "${data.id}" ] ;
+                    ns1:controlledProperty ?controlledProperty ;
+                    ns2:deviceType ?deviceType ;
+                    ns2:refDevice ?refDevice ;
+                    ns1:depth ?depth ;
+                    ns1:source ?source ;
+                    ngsi-ld:name ?name .
+        }
+    `;
+    
+    console.log(sparqlUpdate)
+    const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/sparql-update',
+    },
+    body: sparqlUpdate,
+    };
+
+    fetch(endpointURL, requestOptions)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.error('Error al realizar la solicitud:', error);
+    });
+    
+    res.status(204).send();
+    return;
+}
+
+module.exports.updateDeviceMeasurementFiltered = async (req, res, next) => {
+
+    data = req?.body["data"][0];
+ 
+    const sparqlUpdate = `
+        PREFIX : <https://uri.etsi.org/ngsi-ld/default-context/>
+        PREFIX ngsi-ld: <https://uri.etsi.org/ngsi-ld/>
+        PREFIX ns1: <https://smartdatamodels.org/>
+        PREFIX ns2: <https://smartdatamodels.org/dataModel.DeviceMeasurement/>
+        PREFIX ns4: <https://smartdatamodels.org/dataModel.Device/>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX schema: <https://schema.org/> 
+
+        DELETE {
+            ?entity ns2:numValue ?numValue ;
+                    ns1:dateLastValueReported ?dateLastValueReported .
+        }
+        INSERT {
+            ?entity a <https://smartdatamodels.org/dataModel.DeviceMeasurement/DeviceMeasurement> ;
+                ns2:numValue [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue "${data.numValue.value}"^^xsd:double ;
+                    ngsi-ld:observedAt "${data.numValue.observedAt}"^^ngsi-ld:DateTime ] ;
+                ns1:dateLastValueReported [ a ngsi-ld:Property ;
+                    ngsi-ld:hasValue "${data.dateLastValueReported.value}" ] .
+        }
+        WHERE {
+            ?entity a <https://smartdatamodels.org/dataModel.DeviceMeasurement/DeviceMeasurement> ;
+                    ns1:identifier [ ngsi-ld:hasValue "${data.id}" ] ;
+            OPTIONAL {
+                ?entity ns2:numValue ?numValue ;
+                        ns1:dateLastValueReported ?dateLastValueReported ;
+            }
+        }
+    `;
+    
+    console.log(sparqlUpdate)
+    const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/sparql-update',
+    },
+    body: sparqlUpdate,
+    };
+
+    fetch(endpointURL, requestOptions)
+    .then(response => {
+        console.log(response);
+    })
+    .catch(error => {
+        console.error('Error al realizar la solicitud:', error);
+    });
+    
+    res.status(204).send();
+    return;
+}
+

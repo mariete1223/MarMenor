@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  # @context file is served from here
+ 
   # Databases
   mongo-db:
     labels:
@@ -22,8 +22,74 @@ services:
         host=`hostname --ip-address || echo '127.0.0.1'`; 
         mongo --quiet $host/test --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)' && echo 0 || echo 1    
       interval: 5s
-
+      
+  timescale-db:
+    labels:
+      org.fiware: 'tutorial'
+    image: timescale/timescaledb-postgis:${TIMESCALE_VERSION}
+    hostname: timescale-db
+    container_name: db-timescale
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U orion" ]
+      interval: 15s
+      timeout: 15s
+      retries: 5
+      start_period: 60s
+    environment:
+      - POSTGRES_USER=orion
+      - POSTGRES_PASSWORD=orion
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    command: ["postgres", "-c", "log_statement=none"]
+    expose:
+      - "${TIMESCALE_PORT}"
+    ports:
+      - "${TIMESCALE_PORT}:${TIMESCALE_PORT}"
+    networks:
+      - default
+    volumes:
+      - timescale-db:/var/lib/postgresql/data
     # Tutorial acts as a series of dummy IoT Sensors over HTTP
+
+  mintaka:
+    labels:
+      org.fiware: 'tutorial'
+    image: quay.io/fiware/mintaka:${MINTAKA_VERSION}
+    hostname: mintaka
+    container_name: fiware-mintaka
+    restart: always
+    depends_on:
+      - timescale-db
+    environment:
+      - DATASOURCES_DEFAULT_HOST=timescale-db
+      - DATASOURCES_DEFAULT_USERNAME=orion
+      - DATASOURCES_DEFAULT_PASSWORD=orion
+      - DATASOURCES_DEFAULT_DATABASE=orion
+      - DATASOURCES_DEFAULT_MAXIMUM_POOL_SIZE=2
+      - ENDPOINTS_INFO_ENABLED=true
+      - ENDPOINTS_INFO_SENSITIVE=false
+    expose:
+      - "${MINTAKA_PORT}"
+    ports:
+      - "${MINTAKA_PORT}:${MINTAKA_PORT}"
+    networks:
+      - default
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-dev
+    ports:
+      - "4000:3000"
+    networks:
+      - default
+    volumes:
+      - ./ngsild-grafana-datasource:/var/lib/grafana/plugins/ngsild-grafana-datasource:ro
+    environment:
+      - GF_PATHS_PLUGINS=/var/lib/grafana/plugins
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=ngsild-grafana-datasource
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_SERVER_DOMAIN=localhost
+    restart: always
 
   orion:
     labels:
@@ -34,14 +100,25 @@ services:
     container_name: fiware-orion
     depends_on:
       - mongo-db
+      - mintaka
+      - timescale-db
     networks:
       - default
     ports:
       - ${EXPOSED_PORT:-1026}:${ORION_LD_PORT:-1026} # localhost:1026
+    environment:
+      - ORIONLD_TROE=TRUE
+      - ORIONLD_TROE_USER=orion
+      - ORIONLD_TROE_PWD=orion
+      - ORIONLD_TROE_HOST=timescale-db
+      - ORIONLD_MONGO_HOST=mongo-db
+      - ORIONLD_MULTI_SERVICE=TRUE
+      - ORIONLD_DISABLE_FILE_LOG=TRUE
     command: -dbhost mongo-db -logLevel DEBUG -forwarding -experimental
+    restart: always
     healthcheck:
       test: curl --fail -s http://orion:${ORION_LD_PORT}/version || exit 1
-      interval: 5s
+      interval: 20s
 
   node-app:
     labels:
@@ -52,17 +129,24 @@ services:
     container_name: node-app
     ports:
       - "3000:3000"
-    depends_on:
-      - mongo-db
     networks:
       - default
-    environment:
-      MONGO_URI: "mongodb://mongo-db:${MONGO_DB_PORT}/marMenor"
     healthcheck:
       test: curl --fail -s http://localhost:3000/health || exit 1
       interval: 5s
       timeout: 3s
       retries: 3
+
+  fuseki:
+    image: stain/jena-fuseki
+    container_name: fuseki
+    ports:
+      - "3030:3030"
+    environment:
+      - FUSEKI_HOME=/jena-fuseki
+      - FUSEKI_BASE=/fuseki
+      - ADMIN_PASSWORD=admin
+    user: "root"
 
 networks:
   default:
@@ -75,6 +159,7 @@ networks:
 volumes:
   mongo-db: ~
   mongo-config: ~
+  timescale-db: ~
   data-models:
     driver: local
     driver_opts:

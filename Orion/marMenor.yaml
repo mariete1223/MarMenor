@@ -1,0 +1,173 @@
+components:
+  schemas:
+    Device:
+      type: object
+      allOf:
+        - $ref: https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/Device/model.yaml#/Device
+
+      properties:
+        controlledProperty:
+          description: 'Anything that can be sensed, measured or controlled by.'
+          items:
+            enum:
+              - airPollution
+              - atmosphericPressure
+              - averageVelocity
+              - batteryLife
+              - batterySupply
+              - cdom
+              - conductance
+              - conductivity
+              - chlorophyll
+              - depth
+              - eatingActivity
+              - electricityConsumption
+              - energy
+              - fillingLevel
+              - flow
+              - freeChlorine
+              - gasConsumption
+              - gateOpening
+              - heading
+              - humidity
+              - light
+              - location
+              - milking
+              - motion
+              - movementActivity
+              - noiseLevel
+              - occupancy
+              - organicMatter
+              - orp
+              - oxygen
+              - pH
+              - piezometricLevel
+              - polyethylene
+              - power
+              - precipitation
+              - pressure
+              - refractiveIndex
+              - salinity
+              - smoke
+              - soilMoisture
+              - solarRadiation
+              - speed
+              - tds
+              - temperature
+              - trafficFlow
+              - transparency
+              - tss
+              - turbidity
+              - uvLampIntensity
+              - uvOrganicLoad
+              - volume
+              - waterConsumption
+              - waterLevel
+              - waterPollution
+              - weatherConditions
+              - weight
+              - windDirection
+              - windSpeed
+            type: string
+          type: array
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
+            uri-prefix: https://smartdatamodels.org/
+    
+      x-ngsi:
+        uri-prefix: https://smartdatamodels.org/dataModel.Device/
+  
+    DeviceMeasurement:
+      type: object
+      allOf:
+        - $ref: https://raw.githubusercontent.com/smart-data-models/dataModel.Device/master/DeviceMeasurement/model.yaml#/DeviceMeasurement
+      
+      properties:
+        depth:
+          description: Depth where the measurement was taken in meters
+          type: number
+          x-ngsi:
+            model: https://schema.org/Number
+            type: Property
+            uri-prefix: https://smartdatamodels.org/
+        target:
+          description: "A string representing the specific object or place where the measurement was taken\n"
+          type: string
+          x-ngsi: 
+            model: "https://schema.org/Text"
+            type: Property
+            uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/marMenor.yaml#/
+        numValue:
+          description: Numerical value of the measurement
+          type: number
+          x-ngsi:
+            properties: 
+              observedAt:
+                description: "A timestamp which denotes when the reading was taken\n"
+                format: date-time
+                type: string
+                x-ngsi: 
+                  model: "https://schema.org/DateTime"
+                  type: Property
+            model: https://schema.org/Number
+            type: Property
+      x-ngsi:
+        uri-prefix: https://smartdatamodels.org/dataModel.DeviceMeasurement/
+    
+    WaterNetwork:
+      type: object
+      allOf:
+        - $ref: https://raw.githubusercontent.com/smart-data-models/dataModel.WaterDistributionManagementEPANET/master/WaterNetwork/model.yaml#/WaterNetwork
+
+      description:  
+        "Adapted model from WaterNetwork of WaterDistributionManagementEPANET, representing a complex Ravine composed by the aggregation of simple Ravines"
+
+      x-ngsi:
+        uri-prefix: https://smartdatamodels.org/dataModel.WaterDistributionManagementEPANET/
+    
+    PiezometricNet:
+      type: object
+      allOf:
+        - $ref: ./piezometricNet.yaml#/PiezometricNet
+      x-ngsi:
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/PiezometricNet/piezometricNet.yaml#/
+
+    Buoy:
+      type: object
+      allOf:
+        - $ref: ./buoy.yaml#/Buoy
+      x-ngsi:
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Buoy/buoy.yaml#/
+    
+    Ravine:
+      type: object
+      allOf:
+        - $ref: ./ravine.yaml#/Ravine
+      x-ngsi:
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/Ravine/ravine.yaml#/
+    
+    SoundingPlace:
+      type: object
+      allOf:
+        - $ref: ./soundingPlace.yaml#/SoundingPlace
+      x-ngsi:
+        uri-prefix: https://raw.githubusercontent.com/mariete1223/MarMenor/main/Orion/SoundingPlace/soundingPlace.yaml#/
+info: 
+  description: "Model Definition for Mar Menor enviroment"
+  title: Smart Devices Mar Menor Data Models
+  version: "1.0.0"
+openapi: "3.0.0"
+
+# These paths are merely representative.
+paths: 
+  /ngsi-ld/v1/entities: 
+    get: 
+      responses: 
+        ? "200"
+        : 
+          description:  OK
+          content: 
+            application/ld+json: 
+              schema: 
+                type: object
